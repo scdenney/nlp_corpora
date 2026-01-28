@@ -50,7 +50,4 @@ See [LICENSE](./LICENSE) for details.
 
 ## Contact
 
-Steven Denney
-Leiden University
-stevencdenney@gmail.com
-s.c.denney@hum.leidenuniv.nl
+Steven Denney, Leiden University (s.c.denney@hum.leidenuniv.nl)
