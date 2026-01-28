@@ -9,7 +9,7 @@ This folder contains all corpora in the repository. Each dataset has its own sub
 | Folder | Description | Documentation |
 |--------|-------------|---------------|
 | `nikh` | NIKH History Textbooks — Korean history textbooks spanning late Joseon through contemporary curricula | [`nikh/README.md`](./nikh/README.md) |
-| `kaebyok` | Kaebyok Magazine (1920–1935) — Interwar Korean magazine articles organized by publication date | — |
+| `kaebyok` | Kaebyok Magazine (1920–1935) — 2,467 articles from the interwar Korean magazine | [`kaebyok/README.md`](./kaebyok/README.md) |
 
 ---
 

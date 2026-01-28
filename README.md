@@ -34,7 +34,7 @@ All corpora are located in the [`/data`](./data) folder. See the [data folder RE
 | Corpus | Description | Folder |
 |--------|-------------|--------|
 | **NIKH History Textbooks** | Korean history textbooks from the National Institute of Korean History, spanning late Joseon through contemporary national curricula. | [`nikh`](./data/nikh) |
-| **Kaebyok Magazine (1920–1935)** | Full-text articles from the interwar Korean magazine reflecting colonial-era intellectual debates. | [`kaebyok`](./data/kaebyok) |
+| **Kaebyok Magazine (1920–1935)** | 2,467 articles from the interwar Korean magazine reflecting colonial-era intellectual debates. | [`kaebyok`](./data/kaebyok) |
 
 ### Research Corpora
 
