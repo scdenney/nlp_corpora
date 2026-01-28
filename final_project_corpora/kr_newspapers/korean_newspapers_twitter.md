@@ -4,7 +4,7 @@
 
 This corpus contains tweets from six major South Korean newspapers’ Twitter accounts over a short but politically notable period in mid-2017. The data covers posts made between **2017-07-21** and **2017-08-11**, during the early months of the Moon Jae-in presidency. 
 
-Thperiod of coverage was a moment marked by active debate on inter-Korean relations, the THAAD missile-defense deployment, evolving U.S.–Korea diplomatic dynamics under the first Trump administration, domestic economic concerns surrounding job creation and labor reforms, and continued political fallout from the impeachment of former president Park Geun-hye. News outlets during this period were highly engaged in framing policy announcements, interpreting early approval-rating trends, and responding to rapid developments on the Korean Peninsula, making this a rich snapshot of contemporary political communication across ideologically diverse media organizations.
+This period of coverage was a moment marked by active debate on inter-Korean relations, the THAAD missile-defense deployment, evolving U.S.–Korea diplomatic dynamics under the first Trump administration, domestic economic concerns surrounding job creation and labor reforms, and continued political fallout from the impeachment of former president Park Geun-hye. News outlets during this period were highly engaged in framing policy announcements, interpreting early approval-rating trends, and responding to rapid developments on the Korean Peninsula, making this a rich snapshot of contemporary political communication across ideologically diverse media organizations.
 
 Each row represents a single tweet from one of the following outlets:
 

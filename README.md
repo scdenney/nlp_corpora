@@ -12,12 +12,12 @@ This repository is maintained by **Steven Denney** (Leiden University). Addition
 
 | Corpus | Description | Location |
 |--------|-------------|----------|
-| **NIKH History Textbooks** | Korean history textbooks from the National Institute of Korean History, spanning late Joseon through contemporary national curricula. | [`/nikh`](./nikh) |
-| **Kaebyok Magazine (1920–1935)** | Full-text articles from the interwar Korean magazine reflecting cultural, intellectual, and political debates during the colonial period. | [`/kaebyok`](./kaebyok) |
+| **NIKH History Textbooks** | Korean history textbooks from the National Institute of Korean History, spanning late Joseon through contemporary national curricula. Includes book-level and sentence-level formats. | [`/nikh`](./nikh) |
+| **Kaebyok Magazine (1920–1935)** | Full-text articles from the interwar Korean magazine reflecting cultural, intellectual, and political debates during the colonial period. Organized by publication date. | [`/kaebyok`](./kaebyok) |
 
 ### Research Corpora
 
-The [`/final_project_corpora`](./final_project_corpora) folder contains six additional datasets suitable for text analysis projects:
+The [`/final_project_corpora`](./final_project_corpora) folder contains six additional datasets suitable for text analysis:
 
 | Corpus | Description | Data File |
 |--------|-------------|-----------|
@@ -28,7 +28,7 @@ The [`/final_project_corpora`](./final_project_corpora) folder contains six addi
 | **Kyŏngje Yŏngu** | Articles from a North Korean economics journal (1987–2017), documenting economic discourse across three leadership periods. | `kjyg.csv` |
 | **Presidential Speeches** | Korean presidential speeches from Rhee Syngman through Moon Jae-in, with metadata on era, regime type, and speech category. | `president_speech_ko.csv` |
 
-Each dataset includes a Markdown documentation file (`.md`) with variable definitions, context, and suggested uses.
+Each dataset includes a Markdown documentation file (`.md`) with variable definitions, context, and suggested uses. See the [Corpora Guide](./final_project_corpora/final_project_guide.md) for details.
 
 ### Supplementary Resources
 
@@ -36,17 +36,16 @@ Each dataset includes a Markdown documentation file (`.md`) with variable defini
 |----------|-------------|----------|
 | **Korean Sentiment Dictionaries** | Positive and negative word lists for Korean sentiment analysis. | [`/sentiment_dic_kor`](./sentiment_dic_kor) |
 | **Korean Stopwords** | Curated stopword list for Korean text preprocessing. | `stopwords_ko_ba3.txt` |
+| **NK Migrant Data (Wide Format)** | Alternative format of the North Korean migrant interview responses with columns for each task type. | [`/nk_migrant`](./nk_migrant) |
 | **Preprocessing Scripts** | Python scripts for text cleaning and preprocessing (Mac and Windows versions). | Root directory |
 
 ---
 
 ## Getting Started
 
-1. **Browse the corpora** using the table above to identify datasets relevant to your research interests.
-2. **Read the documentation** (`.md` files) before working with any dataset. These files explain the variables, data sources, and any preprocessing that has been applied.
+1. **Browse the corpora** using the tables above to identify datasets relevant to your research interests.
+2. **Read the documentation** (`.md` and `README.md` files) before working with any dataset. These files explain the variables, data sources, and any preprocessing that has been applied.
 3. **Download or clone** the repository to access the data files directly.
-
-For detailed guidance on working with the research corpora, see the [Corpora Guide](./final_project_corpora/final_project_guide.md).
 
 ---
 

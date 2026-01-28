@@ -24,7 +24,7 @@ Each tweet is accompanied by core platform metadata (e.g., creation time, retwee
 
 ## Augmented Subgroup Variables
 
-These variables were added during to support (additional) analysis:
+These variables were added to support additional analysis:
 
 | Variable        | Description |
 |----------------|-------------|

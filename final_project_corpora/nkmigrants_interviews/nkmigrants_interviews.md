@@ -6,7 +6,7 @@ This corpus contains short, open-text explanations written by South Korean surve
 
 This file contains those open-text, interview-like explanations. They represent how ordinary South Koreans articulate the reasoning behind social, political, and interpersonal judgments toward co-ethnic migrants. Whereas the experimental design quantifies how profile attributes shape support (e.g., education, occupation, age, political history, skill match, or time spent in South Korea), these open-text responses reveal the language, frames, and rationales respondents naturally draw upon.
 
-The responses in this corpus can be read together as a measure of overall prefercnes or users can look at responses per 'integration type': political, economic, and social, corresponding to voting, hiring, and having as a neighbor.
+The responses in this corpus can be read together as a measure of overall preferences or users can look at responses per 'integration type': political, economic, and social, corresponding to voting, hiring, and having as a neighbor.
 
 **NOTE:** As argued in Denney & Green (2024; see article included in this folder), text-based explanations offer a complementary window into the mechanisms behind support for co-ethnic migrant integration. Users are **strongly advised** to see attributes used to define migrant profiles (pp. 2006-2007) from the article.
 
