@@ -10,33 +10,33 @@ This repository is maintained by **Steven Denney** (Leiden University). Addition
 
 ```
 nlp_corpora/
-├── data/                  # Research corpora with documentation
-├── nikh/                  # NIKH History Textbook corpus
-├── kaebyok/               # Kaebyok Magazine (1920–1935)
-└── README.md
+├── data/
+│   ├── nikh/                     # NIKH History Textbooks
+│   ├── kaebyok/                  # Kaebyok Magazine (1920–1935)
+│   ├── immigrant_interviews/
+│   ├── kr_newspapers/
+│   ├── kyongje_yongu/
+│   ├── moon_twitter/
+│   ├── nkmigrants_interviews/
+│   └── president_speeches/
+├── README.md
+└── LICENSE
 ```
 
 ---
 
 ## Corpora
 
-### NIKH History Textbooks
+All corpora are located in the [`/data`](./data) folder. See the [data folder README](./data/README.md) for details.
 
-Korean history textbooks from the National Institute of Korean History, spanning late Joseon through contemporary national curricula. Includes book-level and sentence-level formats.
+### Primary Corpora
 
-- **Location:** [`/nikh`](./nikh)
-- **Documentation:** [`/nikh/README.md`](./nikh/README.md)
-- **Online source:** [contents.history.go.kr](https://contents.history.go.kr/front/ta/main.do)
-
-### Kaebyok Magazine (1920–1935)
-
-Full-text articles from the interwar Korean magazine *Kaebyok*, reflecting cultural, intellectual, and political debates during the Japanese colonial period. Articles are organized by publication date.
-
-- **Location:** [`/kaebyok`](./kaebyok)
+| Corpus | Description | Folder |
+|--------|-------------|--------|
+| **NIKH History Textbooks** | Korean history textbooks from the National Institute of Korean History, spanning late Joseon through contemporary national curricula. | [`nikh`](./data/nikh) |
+| **Kaebyok Magazine (1920–1935)** | Full-text articles from the interwar Korean magazine reflecting colonial-era intellectual debates. | [`kaebyok`](./data/kaebyok) |
 
 ### Research Corpora
-
-The [`/data`](./data) folder contains six additional datasets, each with its own documentation:
 
 | Corpus | Description | Folder |
 |--------|-------------|--------|
@@ -46,8 +46,6 @@ The [`/data`](./data) folder contains six additional datasets, each with its own
 | **Korean Newspapers on Twitter** | Tweets from six major South Korean newspapers (July–August 2017). | [`kr_newspapers`](./data/kr_newspapers) |
 | **Kyŏngje Yŏngu** | Articles from a North Korean economics journal (1987–2017). | [`kyongje_yongu`](./data/kyongje_yongu) |
 | **Presidential Speeches** | Korean presidential speeches from Rhee Syngman through Moon Jae-in. | [`president_speeches`](./data/president_speeches) |
-
-See the [data folder README](./data/README.md) for detailed information about each dataset.
 
 ---
 

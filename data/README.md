@@ -1,15 +1,19 @@
-# Research Corpora
+# Data
 
-This folder contains six curated datasets for text analysis and computational social science research. Each dataset consists of:
-
-- **A CSV file** — the corpus data
-- **A Markdown (.md) file** — documentation with variable definitions, context, and suggested uses
-
-The folders containing interview responses also include reference articles. **Read the `.md` file first** before working with any dataset.
+This folder contains all corpora in the repository. Each dataset has its own subfolder with data files and documentation.
 
 ---
 
-## Available Corpora
+## Primary Corpora
+
+| Folder | Description | Documentation |
+|--------|-------------|---------------|
+| `nikh` | NIKH History Textbooks — Korean history textbooks spanning late Joseon through contemporary curricula | [`nikh/README.md`](./nikh/README.md) |
+| `kaebyok` | Kaebyok Magazine (1920–1935) — Interwar Korean magazine articles organized by publication date | — |
+
+---
+
+## Research Corpora
 
 | Folder | Data File | Documentation | Topic |
 |--------|-----------|---------------|-------|
@@ -22,21 +26,9 @@ The folders containing interview responses also include reference articles. **Re
 
 ---
 
-## Suggested Workflow
+## Usage
 
-1. **Select a dataset** that aligns with your research interests.
-2. **Read the documentation** (`.md` file) to understand the context, variables, and data structure.
-3. **Explore the CSV** and use the documentation as a guide during analysis.
+1. **Read the documentation** (`.md` or `README.md` file) in each folder before working with the data.
+2. **Explore the data files** using the documentation as a guide.
 
----
-
-## Analysis Approaches
-
-These corpora support various text analysis methods:
-
-- Sentiment or tone analysis
-- Topic modeling
-- Comparative framing
-- Temporal trends
-- Classification or prediction
-- Qualitative theme identification
+These corpora support various text analysis methods including sentiment analysis, topic modeling, comparative framing, and temporal analysis.
