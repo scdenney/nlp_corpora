@@ -4,7 +4,7 @@ This folder contains all corpora in the repository. Each dataset has its own sub
 
 | Corpus | Folder | File(s) | Rows | Date Range |
 |--------|--------|---------|------|------------|
-| **NIKH History Textbooks** | [`nikh`](./nikh) | `nikh_corpus.csv`, `nikh_sentences.csv` | 51 books; 86,740 sentences | 1895–2002 |
+| **NIKH History Textbooks** | [`nikh`](./nikh) | `nikh_corpus.csv`, `nikh_sentences.csv` | 67 books; 188,259 sentences | 1895–2016 |
 | **Kaebyok Magazine** | [`kaebyok`](./kaebyok) | `kaebyok_corpus.csv` | 2,467 | 1920–1935 |
 | **Immigrant Interviews** | [`immigrant_interviews`](./immigrant_interviews) | `immigrant_interview.csv` | 1,008 | Cross-sectional |
 | **North Korean Migrant Interviews** | [`nkmigrants_interviews`](./nkmigrants_interviews) | `nkmigrants_interviews.csv` | 6,027 | Cross-sectional |

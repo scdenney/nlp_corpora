@@ -1,6 +1,6 @@
 # NIKH History Textbook Corpus
 
-This folder contains the National Institute of Korean History (NIKH; 국사편찬위원회) history textbook corpus, a collection of Korean history textbooks produced under successive national curricula from the late Joseon and Korean Empire through the Japanese colonial period, liberation, and contemporary postwar curricula.
+This folder contains the National Institute of Korean History (NIKH; 국사편찬위원회) history textbook corpus, a collection of Korean history textbooks produced under successive national curricula from the late Joseon and Korean Empire through the Japanese colonial period, liberation, and contemporary postwar curricula — including the revised 7th Curriculum textbooks used through 2016.
 
 An online-navigable version of the original textbooks is available through the National Institute of Korean History: [contents.history.go.kr](https://contents.history.go.kr/front/ta/main.do)
 
@@ -10,31 +10,45 @@ An online-navigable version of the original textbooks is available through the N
 
 | File | Description | Rows |
 |------|-------------|------|
-| **nikh_corpus.csv** | Full textbook corpus with book-level metadata and text | 51 |
-| **nikh_sentences.csv** | Corpus split into individual sentences | 86,740 |
-| **nikh_sentences_25percent.csv** | 25% random sample of sentences (for faster processing) | ~21,685 |
-| **code_book.csv** | Variable definitions for the corpus | 12 |
+| **nikh_corpus.csv** | Full textbook corpus with book-level metadata and text | 67 |
+| **nikh_sentences.csv** | Corpus split into individual sentences (kiwipiepy) | 188,259 |
+| **nikh_sentences_25percent.csv** | 25% stratified random sample of sentences | 47,065 |
+| **code_book.csv** | Variable definitions for the corpus | — |
 
 ---
 
 ## Variables in `nikh_corpus.csv`
 
-12 columns. Each row is one textbook (51 books total).
+14 columns. Each row is one textbook (67 books total).
 
 | Variable | Type | Description |
 |----------|------|-------------|
-| **book_id** | string | Unique identifier for each textbook, derived from NIKH filenames (e.g., `ta_m71`, `ta_e51`, `ta_p11r`). Primary key for joining with sentence-level data. 51 unique values. |
+| **book_id** | string | Unique identifier for each textbook. Two formats: `ta_*` for the original NIKH digitized series (51 books, 1895–2002); `H-*` for newer textbooks added in the revised 7th Curriculum era (16 books, 2002–2016). Primary key for joining with sentence-level data. |
 | **title** | string | Full title of the textbook in Korean. See sample titles below. |
-| **curriculum** | string | National curriculum period or pre-modern series code. 17 unique values (see value table below). |
+| **curriculum** | string | National curriculum period or pre-modern series code. 19 unique values (see value table below). |
 | **nikh_period** | string | Source-assigned period in which the textbook was published. 10 unique values (see value table below). |
-| **period** | string | Curator-assigned historical era of production. 8 unique values (see value table below). |
+| **period** | string | Curator-assigned historical era. 5 values: `Late Choson`, `Colonial`, `Postwar`, `Authoritarian`, `Democratic`. |
 | **level** | string | Educational level. 4 values: `Elementary`, `Middle School`, `High School`, `Public schools`. |
-| **publisher** | string | Publishing institution or company (in Korean). 7 unique values (see translations below). Some `NaN` for pre-modern books. |
-| **year** | float | Year of textbook publication. 11 unique values ranging from 1895 to 2002. `NaN` for some pre-modern books. |
-| **num_sections** | integer | Number of structural sections (chapters, units) in the book. |
+| **publisher** | string | Publishing institution or company (Korean). 5 missing values for pre-modern books. |
+| **year** | float | Year of textbook publication. Range: 1895–2016. 9 missing values for pre-modern books. |
+| **num_sections** | integer | Number of structural sections (chapters, units). |
 | **full_text** | string | Full digitized text with no preprocessing. |
-| **clean_text** | string | Text with moderate preprocessing applied. |
-| **period_ordered** | string | Same as `period` but prefixed with a sort number (e.g., `1. Late Choson / Korean Empire`). |
+| **authors** | string | Author(s) or editor(s) listed for the textbook. Currently unpopulated (67 missing). |
+| **notes** | string | Curatorial notes, e.g., provenance or inferences about metadata. 51 missing. |
+| **num_pages** | float | Total number of pages in the textbook. Available for H-series books only; 51 missing. |
+| **processed_text** | string | Preprocessed text: POS-filtered nouns (NNG, NNP), stopwords removed, min 2-char tokens, numbers removed. Produced via Kiwi morphological analysis. Ready for TF-IDF and topic modeling. |
+
+---
+
+## `period` Values
+
+| Value | Approximate Years | Context |
+|-------|-------------------|---------|
+| `Late Choson` | 1895–1910 | Late Joseon reform era and Korean Empire |
+| `Colonial` | 1910–1945 | Japanese colonial rule |
+| `Postwar` | 1945–1954 | U.S. Military Government and early republic |
+| `Authoritarian` | 1954–1992 | 1st through 5th Curricula; Park Chung-hee (incl. Yushin), Chun Doo-hwan, and transition period |
+| `Democratic` | 1992–2016 | 6th Curriculum onward; Kim Young-sam through Park Geun-hye |
 
 ---
 
@@ -51,31 +65,27 @@ An online-navigable version of the original textbooks is available through the N
 | 4th National Curriculum (1981-1987) | — |
 | 5th National Curriculum (1987-1992) | — |
 | 6th National Curriculum (1992-2002) | — |
-| 7th National Curriculum (2002-) | — |
-
----
-
-## `period` Values (Curator-Assigned Historical Eras)
-
-| Value | Approximate Years | Context |
-|-------|-------------------|---------|
-| Late Choson / Korean Empire | 1895–1910 | Reforms, sovereignty under threat |
-| Colonial Period | 1910–1945 | Japanese rule; textbooks published by 문부성 (Japanese Ministry of Education) |
-| U.S. Military Government | 1945–1948 | Post-liberation transition; textbooks published by 진단학회 (Chindan Society) |
-| Postwar Authoritarian | 1954–1972 | Rhee Syngman and early Park Chung-hee; 1st–2nd Curricula |
-| Yushin Era | 1972–1981 | Park's authoritarian Yushin constitution; 3rd Curriculum |
-| Chun/Roh Transitional | 1981–1992 | Military-to-civilian transition; 4th–5th Curricula |
-| Early Democratic | 1992–2002 | Kim Young-sam and Kim Dae-jung presidencies; 6th Curriculum |
-| Democratic Consolidation | 2002– | 7th Curriculum onward |
+| 7th National Curriculum (2002–) | Includes original (2002) and revised editions (2006–2016) |
 
 ---
 
 ## `curriculum` Values
 
-The 17 unique values fall into two groups:
+19 unique values:
 
-- **Named curricula:** `1st Curriculum` through `7th Curriculum` — corresponding to postwar national curricula.
-- **Pre-modern series codes:** `p11 Series` through `p101 Series` — corresponding to pre-1945 textbook groupings in the NIKH catalog.
+- **Named curricula:** `1st Curriculum` through `7th Curriculum`, plus `7th Curriculum (Revised)` and `5th-6th Transition`
+- **Pre-modern series codes:** `p11 Series` through `p101 Series`
+
+---
+
+## `book_id` Format
+
+| Format | Example | Count | Source | Years |
+|--------|---------|-------|--------|-------|
+| `ta_*` | `ta_m71`, `ta_e51`, `ta_p11r` | 51 | Original NIKH digitized collection | 1895–2002 |
+| `H-*` | `H-1(1,2006)`, `H-54(2,2016)` | 16 | Revised 7th Curriculum textbooks | 2002–2016 |
+
+The `H-*` identifiers encode publisher ID and edition year in parentheses.
 
 ---
 
@@ -95,44 +105,47 @@ The 17 unique values fall into two groups:
 
 ## Sample Titles (with Translations)
 
-| book_id | Title (Korean) | Translation | Period | Level |
-|---------|---------------|-------------|--------|-------|
-| ta_p11r | 조선역사 상 | History of Joseon, Vol. 1 | Late Choson / Korean Empire | Public schools |
-| ta_p21r | 조선역대사략 권1 | Abridged Dynastic History of Joseon, Vol. 1 | Late Choson / Korean Empire | Public schools |
-| ta_p71r | 보통교과 동국역사(1권) | Standard Curriculum: History of the Eastern Country, Vol. 1 | Late Choson / Korean Empire | Elementary |
-| ta_p91r | 초등대한역사 | Elementary Korean History | Late Choson / Korean Empire | Elementary |
-| ta_p31r | 심상소학국사보충아동용 - 1 | Supplementary National History for Elementary Children, Vol. 1 | Colonial Period | — |
-| ta_p51r | 국사교본 | National History Textbook | U.S. Military Government | — |
-| ta_e11 | 초등학교 사회생활 6-1(1차) | Elementary School Social Life 6-1 (1st Curriculum) | Postwar Authoritarian | Elementary |
-| ta_m31 | 중학교 국사 3차 | Middle School National History, 3rd Curriculum | Yushin Era | Middle School |
-| ta_h71 | 고등학교 국사 7차 | High School National History, 7th Curriculum | Democratic Consolidation | High School |
+| book_id | Title (Korean) | Translation | Period | Level | Year |
+|---------|---------------|-------------|--------|-------|------|
+| ta_p11r | 조선역사 상 | History of Joseon, Vol. 1 | Late Choson | Public schools | 1895 |
+| ta_p91r | 초등대한역사 | Elementary Korean History | Late Choson | Elementary | 1908 |
+| ta_p31r | 심상소학국사보충아동용 - 1 | Supplementary National History for Elementary Children, Vol. 1 | Colonial | — | — |
+| ta_p51r | 국사교본 | National History Textbook | Postwar | — | — |
+| ta_e11 | 초등학교 사회생활 6-1(1차) | Elementary School Social Life 6-1 (1st Curriculum) | Authoritarian | Elementary | 1954 |
+| ta_m31 | 중학교 국사 3차 | Middle School National History, 3rd Curriculum | Authoritarian | Middle School | 1973 |
+| ta_h71 | 고등학교 국사 7차 | High School National History, 7th Curriculum | Democratic | High School | 2002 |
+| H-10(4,2007) | 한국근현대사 | Korean Modern and Contemporary History | Democratic | High School | 2008 |
+| H-54(2,2016) | 한국사 | Korean History | Democratic | High School | 2016 |
 
 ---
 
 ## Variables in `nikh_sentences.csv`
 
-5 columns. Each row is one sentence extracted from a textbook (86,740 sentences total, drawn from 51 books).
+5 columns. Each row is one sentence extracted from a textbook (188,259 sentences total, from 67 books). Sentences were split using kiwipiepy's `split_into_sents` method and filtered to a minimum length of 2 characters.
 
 | Variable | Type | Description |
 |----------|------|-------------|
-| **period_ordered** | string | Numbered historical era for sort ordering (e.g., `6. Chun / Roh Transitional`). 8 unique values. |
-| **book_id** | string | Textbook identifier. Joins to `nikh_corpus.csv`. 51 unique values. |
-| **nikh_period** | string | Source-assigned historical period. Same 10 values as the corpus file. |
-| **level** | string | Educational level of the source textbook. Same 4 values as the corpus file. |
+| **book_id** | string | Textbook identifier. Joins to `nikh_corpus.csv`. 67 unique values. |
+| **nikh_period** | string | Source-assigned historical period. |
+| **period** | string | Curator-assigned era. Same 5 values as the corpus file. |
+| **level** | string | Educational level of the source textbook. |
 | **sentence** | string | Individual sentence extracted from the textbook. |
 
 ---
 
 ## Data Quality Notes
 
+- `authors` is unpopulated (67 missing) — no author-level data has been scraped yet.
+- `notes` is populated for 16 H-series books and empty for the original ta-series.
+- `num_pages` is available for H-series books only; the ta-series books have `NaN`.
 - Some pre-modern textbooks (Korean Empire and Colonial eras) have `NaN` for `year`, `level`, and/or `publisher`.
-- The `period_ordered` column in `nikh_sentences.csv` uses slightly different labels from `period` in `nikh_corpus.csv` (e.g., "Colonial" vs. "Colonial Period"), but the mapping is straightforward.
 
 ---
 
 ## Usage Notes
 
 - Use **nikh_corpus.csv** for book-level analysis (topic modeling across textbooks, comparing curricula, etc.)
+- Use **processed_text** for ready-to-use noun tokens (TF-IDF, LDA, etc.)
 - Use **nikh_sentences.csv** for sentence-level analysis (sentiment, keyword extraction, etc.)
 - Use **nikh_sentences_25percent.csv** for prototyping or when working with limited computational resources
 - See **code_book.csv** for the original variable definitions
