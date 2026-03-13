@@ -20,7 +20,7 @@ All corpora are located in the [`/data`](./data) folder. Each folder contains da
 | **Korean Newspapers on Twitter** | Tweets from six major South Korean newspapers (July–August 2017). | 2,748 | [`kr_newspapers`](./data/kr_newspapers) |
 | **Kyŏngje Yŏngu** | Articles from a North Korean economics journal (1987–2017). | 2,583 | [`kyongje_yongu`](./data/kyongje_yongu) |
 | **Presidential Speeches** | Korean presidential speeches from Rhee Syngman through Moon Jae-in. | 8,771 | [`president_speeches`](./data/president_speeches) |
-| **Inter-Korean Summit Corpus** | Newspaper coverage of the 2000, 2007, and 2018 inter-Korean summits from *Chosun Ilbo* and *Hankyoreh*. | 18,018 sentences; 455 article groups; 252 reference 2018 articles | [`inter_korean_summit`](./data/inter_korean_summit) |
+| **Inter-Korean Summit Corpus** | Newspaper coverage of the 2000, 2007, and 2018 inter-Korean summits from *Chosun Ilbo* and *Hankyoreh*. | 18,018 sentences; 455 reconstructed articles; 252 reference 2018 articles | [`inter_korean_summit`](./data/inter_korean_summit) |
 
 ---
 
