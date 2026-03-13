@@ -1,1 +1,5 @@
 .DS_Store
+data/inter_korean_summit/*.txt
+data/inter_korean_summit/build_inter_korean_summit.py
+data/inter_korean_summit/build_inter_korean_summit_full.py
+data/inter_korean_summit/corpus_manifest.json

@@ -12,6 +12,7 @@ This folder contains all corpora in the repository. Each dataset has its own sub
 | **Korean Newspapers on Twitter** | [`kr_newspapers`](./kr_newspapers) | `korean_newspapers_twitter.csv` | 2,748 | Jul–Aug 2017 |
 | **Kyŏngje Yŏngu** | [`kyongje_yongu`](./kyongje_yongu) | `kjyg.csv` | 2,583 | 1987–2017 |
 | **Presidential Speeches** | [`president_speeches`](./president_speeches) | `president_speech_ko.csv` | 8,771 | 1948–2022 |
+| **Inter-Korean Summit Corpus** | [`inter_korean_summit`](./inter_korean_summit) | `inter_korean_summit_full_sentences.csv`, `inter_korean_summit_full_article_candidates.csv`, `inter_korean_summit_2018_articles.csv` | 18,018 sentences (primary); 455 article candidates; 252 reference 2018 articles | 2000, 2007, 2018 |
 
 ## Usage
 
