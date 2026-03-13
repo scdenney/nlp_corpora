@@ -13,7 +13,7 @@ All corpora are located in the [`/data`](./data) folder. Each folder contains da
 | Corpus | Description | Rows | Folder |
 |--------|-------------|------|--------|
 | **NIKH History Textbooks** | Korean history textbooks from the National Institute of Korean History, spanning late Joseon through contemporary national curricula. | 67 | [`nikh`](./data/nikh) |
-| **Kaebyok Magazine (1920–1935)** | 2,467 articles from the interwar Korean magazine reflecting colonial-era intellectual debates. | 2,467 | [`kaebyok`](./data/kaebyok) |
+| **Kaebyok Magazine (1920–1935)** | Articles from the interwar Korean magazine reflecting colonial-era intellectual debates. | 2,467 | [`kaebyok`](./data/kaebyok) |
 | **Immigrant Interviews** | Open-text survey responses from South Koreans explaining immigrant admission preferences. | 1,008 | [`immigrant_interviews`](./data/immigrant_interviews) |
 | **North Korean Migrant Interviews** | Open-text explanations of attitudes toward North Korean migrant integration. | 6,027 | [`nkmigrants_interviews`](./data/nkmigrants_interviews) |
 | **Moon Jae-in Twitter** | Tweets from President Moon Jae-in's official account (2012–2020). | 3,148 | [`moon_twitter`](./data/moon_twitter) |
