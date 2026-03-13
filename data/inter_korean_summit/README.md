@@ -18,7 +18,7 @@ This folder contains newspaper coverage of the 2000, 2007, and 2018 inter-Korean
 
 ## Coverage Summary
 
-### Reconstructed Articles by Year
+### Articles by Year
 
 | Year | Sentences | Articles |
 |------|-----------|----------------|
@@ -26,7 +26,7 @@ This folder contains newspaper coverage of the 2000, 2007, and 2018 inter-Korean
 | **2007** | 5,075 | 42 |
 | **2018** | 10,508 | 399 |
 
-### Reconstructed Articles by Newspaper
+### Articles by Newspaper
 
 | Newspaper | Sentences | Articles |
 |-----------|-----------|----------------|
