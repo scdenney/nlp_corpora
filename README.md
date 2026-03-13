@@ -12,7 +12,7 @@ All corpora are located in the [`/data`](./data) folder. Each folder contains da
 
 | Corpus | Description | Rows | Folder |
 |--------|-------------|------|--------|
-| **NIKH History Textbooks** | Korean history textbooks from the National Institute of Korean History, spanning late Joseon through contemporary national curricula. | 67 books | [`nikh`](./data/nikh) |
+| **NIKH History Textbooks** | Korean history textbooks from the National Institute of Korean History, spanning late Joseon through contemporary national curricula. | 67 | [`nikh`](./data/nikh) |
 | **Kaebyok Magazine (1920–1935)** | 2,467 articles from the interwar Korean magazine reflecting colonial-era intellectual debates. | 2,467 | [`kaebyok`](./data/kaebyok) |
 | **Immigrant Interviews** | Open-text survey responses from South Koreans explaining immigrant admission preferences. | 1,008 | [`immigrant_interviews`](./data/immigrant_interviews) |
 | **North Korean Migrant Interviews** | Open-text explanations of attitudes toward North Korean migrant integration. | 6,027 | [`nkmigrants_interviews`](./data/nkmigrants_interviews) |
@@ -20,7 +20,7 @@ All corpora are located in the [`/data`](./data) folder. Each folder contains da
 | **Korean Newspapers on Twitter** | Tweets from six major South Korean newspapers (July–August 2017). | 2,748 | [`kr_newspapers`](./data/kr_newspapers) |
 | **Kyŏngje Yŏngu** | Articles from a North Korean economics journal (1987–2017). | 2,583 | [`kyongje_yongu`](./data/kyongje_yongu) |
 | **Presidential Speeches** | Korean presidential speeches from Rhee Syngman through Moon Jae-in. | 8,771 | [`president_speeches`](./data/president_speeches) |
-| **Inter-Korean Summit Corpus** | Newspaper coverage of the 2000, 2007, and 2018 inter-Korean summits from *Chosun Ilbo* and *Hankyoreh*. | 455 articles | [`inter_korean_summit`](./data/inter_korean_summit) |
+| **Inter-Korean Summit Corpus** | Newspaper article coverage of the 2000, 2007, and 2018 inter-Korean summits from *Chosun Ilbo* and *Hankyoreh*. | 455 | [`inter_korean_summit`](./data/inter_korean_summit) |
 
 ---
 
