@@ -24,6 +24,7 @@ All corpora are located in the [`/data`](./data) folder. Each folder contains da
 | **Rodong Sinmun (English)** | English-language articles from North Korea's *Rodong Sinmun* (Workers' Daily), the official newspaper of the Workers' Party of Korea (2018–2022). | 9,797 | [`rodong_sinmun`](./data/rodong_sinmun) |
 | **Blue House Petitions** | Citizen petitions submitted to the Moon Jae-in administration's Blue House National Petition system (2017–2018). Includes petition text, category, vote count, and response status. 5% sample of the full corpus. | 18,077 | [`bluehouse_petitions`](./data/bluehouse_petitions) |
 | **KPoEM** | Korean poetry by five canonical modern poets (Yun Dong-ju, Kim So-wol, Han Yong-un, Im Hwa, Yi Sang), annotated with 44 fine-grained emotion categories by five human annotators. Includes line-level and poem-level datasets. | 7,622 | [`kpoem`](./data/kpoem) |
+| **Korean Newspaper Archive (1883–1952)** | Articles from 39 Korean newspapers spanning the late Joseon, colonial, and early Republic periods. Extracted from the OKHC (National Library of Korea). Public domain. | 364,409 | [`korean_newspaper_archive`](./data/korean_newspaper_archive) |
 
 ---
 
