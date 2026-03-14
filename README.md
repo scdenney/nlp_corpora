@@ -14,9 +14,9 @@ All corpora are located in the [`/data`](./data) folder. Each folder contains da
 
 | Corpus | Description | Rows | Folder |
 |--------|-------------|------|--------|
-| **Korean Newspaper Archive (1883–1952)** | Articles from 39 Korean newspapers spanning the late Joseon, Korean Empire, colonial, and early Republic periods. Major titles include Hwangseong Sinmun, Daehan Maeil Sinbo, and Dongnip Sinmun. Extracted from the OKHC (National Library of Korea). | 364,409 | [`korean_newspaper_archive`](./data/korean_newspaper_archive) |
-| **Colonial-Era Magazines (1896–1943)** | Articles from 19 Korean magazines of the late Joseon and colonial periods, including Kaebyok, Samcheolli, Byeolgeongon, and Donggwang. Covers intellectual debate, nationalism, literature, and social reform. Extracted from the OKHC (NIKH). | 15,326 | [`colonial_magazines`](./data/colonial_magazines) |
-| **NIKH History Textbooks** | Korean history textbooks from the National Institute of Korean History, spanning late Joseon through contemporary national curricula. | 67 | [`nikh`](./data/nikh) |
+| **Korean Newspaper Archive (1883–1952)** | Articles from 39 Korean newspapers spanning the late Joseon, Korean Empire, colonial, and early Republic periods. Major titles include Hwangseong Sinmun, Daehan Maeil Sinbo, and Dongnip Sinmun. | 364,409 | [`korean_newspaper_archive`](./data/korean_newspaper_archive) |
+| **Colonial-Era Magazines (1896–1943)** | Articles from 19 Korean magazines of the late Joseon and colonial periods, including Kaebyok, Samcheolli, Byeolgeongon, and Donggwang. Covers intellectual debate, nationalism, literature, and social reform. | 15,326 | [`colonial_magazines`](./data/colonial_magazines) |
+| **NIKH History Textbooks** | Korean history textbooks from the National Institute of Korean History (NIKH) and additional sources, spanning late Joseon through contemporary national curricula. | 67 | [`nikh`](./data/nikh) |
 
 ### North Korean Texts
 
