@@ -68,8 +68,20 @@ Plus 31 additional smaller newspapers.
 
 ## File Formats
 
-- **korean_newspaper_archive.parquet** — Full corpus in Apache Parquet format with zstd compression (75 MB). Use `pandas.read_parquet()` in Python or `arrow::read_parquet()` in R to load.
-- **korean_newspaper_archive_demo.csv** — A random sample of 1,000 articles in CSV format for quick exploration.
+The full corpus is available as a single Parquet file and also as CSV files split by newspaper for accessibility.
+
+**Parquet (full corpus):**
+- **korean_newspaper_archive.parquet** — All 364,409 articles in Apache Parquet format with zstd compression (75 MB). Use `pandas.read_parquet()` in Python or `arrow::read_parquet()` in R.
+
+**CSV files (split by newspaper):**
+
+| File | Newspaper | Years | Rows | Size |
+|------|-----------|-------|------|------|
+| `hwangseong_sinmun_1898-1904.csv` | Hwangseong Sinmun (황성신문) | 1898–1904 | 68,210 | 44 MB |
+| `hwangseong_sinmun_1905-1910.csv` | Hwangseong Sinmun (황성신문) | 1905–1910 | 120,397 | 74 MB |
+| `daehan_maeil_sinbo.csv` | Daehan Maeil Sinbo (대한매일신보) | 1900–1910 | 104,936 | 66 MB |
+| `dongnip_sinmun.csv` | Dongnip Sinmun (독립신문) | 1896–1899 | 19,636 | 14 MB |
+| `other_newspapers.csv` | 36 other newspapers | 1883–1952 | 51,230 | 43 MB |
 
 ---
 
