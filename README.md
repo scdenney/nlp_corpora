@@ -10,21 +10,48 @@ This repository is maintained by **Steven Denney** (Leiden University). Addition
 
 All corpora are located in the [`/data`](./data) folder. Each folder contains data files and documentation.
 
+### Historical Sources
+
 | Corpus | Description | Rows | Folder |
 |--------|-------------|------|--------|
+| **Korean Newspaper Archive (1883–1952)** | Articles from 39 Korean newspapers spanning the late Joseon, Korean Empire, colonial, and early Republic periods. Major titles include Hwangseong Sinmun, Daehan Maeil Sinbo, and Dongnip Sinmun. Extracted from the OKHC (National Library of Korea). | 364,409 | [`korean_newspaper_archive`](./data/korean_newspaper_archive) |
+| **Colonial-Era Magazines (1896–1943)** | Articles from 19 Korean magazines of the late Joseon and colonial periods, including Kaebyok, Samcheolli, Byeolgeongon, and Donggwang. Covers intellectual debate, nationalism, literature, and social reform. Extracted from the OKHC (NIKH). | 15,326 | [`colonial_magazines`](./data/colonial_magazines) |
 | **NIKH History Textbooks** | Korean history textbooks from the National Institute of Korean History, spanning late Joseon through contemporary national curricula. | 67 | [`nikh`](./data/nikh) |
-| **Kaebyok Magazine (1920–1935)** | Articles from the interwar Korean magazine reflecting colonial-era intellectual debates. | 2,467 | [`kaebyok`](./data/kaebyok) |
-| **Immigrant Interviews** | Open-text survey responses from South Koreans explaining immigrant admission preferences. | 1,008 | [`immigrant_interviews`](./data/immigrant_interviews) |
-| **North Korean Migrant Interviews** | Open-text explanations of attitudes toward North Korean migrant integration. | 6,027 | [`nkmigrants_interviews`](./data/nkmigrants_interviews) |
+
+### North Korean Texts
+
+| Corpus | Description | Rows | Folder |
+|--------|-------------|------|--------|
+| **Rodong Sinmun (English)** | English-language articles from North Korea's *Rodong Sinmun* (Workers' Daily), the official newspaper of the Workers' Party of Korea (2018–2022). | 9,797 | [`rodong_sinmun`](./data/rodong_sinmun) |
+| **Kyŏngje Yŏngu** | Articles from a North Korean economics journal (1987–2017). | 2,583 | [`kyongje_yongu`](./data/kyongje_yongu) |
+
+### South Korean Politics
+
+| Corpus | Description | Rows | Folder |
+|--------|-------------|------|--------|
+| **Presidential Speeches** | Korean presidential speeches from Rhee Syngman through Moon Jae-in. | 8,771 | [`president_speeches`](./data/president_speeches) |
+| **Blue House Petitions** | Citizen petitions submitted to the Moon Jae-in administration's Blue House National Petition system (2017–2018). Includes petition text, category, vote count, and response status. 5% sample of the full corpus. | 18,077 | [`bluehouse_petitions`](./data/bluehouse_petitions) |
+| **Inter-Korean Summit Corpus** | Newspaper article coverage of the 2000, 2007, and 2018 inter-Korean summits from *Chosun Ilbo* and *Hankyoreh*. | 455 | [`inter_korean_summit`](./data/inter_korean_summit) |
+
+### Media & Social Media
+
+| Corpus | Description | Rows | Folder |
+|--------|-------------|------|--------|
 | **Moon Jae-in Twitter** | Tweets from President Moon Jae-in's official account (2012–2020). | 3,148 | [`moon_twitter`](./data/moon_twitter) |
 | **Korean Newspapers on Twitter** | Tweets from six major South Korean newspapers (July–August 2017). | 2,748 | [`kr_newspapers`](./data/kr_newspapers) |
-| **Kyŏngje Yŏngu** | Articles from a North Korean economics journal (1987–2017). | 2,583 | [`kyongje_yongu`](./data/kyongje_yongu) |
-| **Presidential Speeches** | Korean presidential speeches from Rhee Syngman through Moon Jae-in. | 8,771 | [`president_speeches`](./data/president_speeches) |
-| **Inter-Korean Summit Corpus** | Newspaper article coverage of the 2000, 2007, and 2018 inter-Korean summits from *Chosun Ilbo* and *Hankyoreh*. | 455 | [`inter_korean_summit`](./data/inter_korean_summit) |
-| **Rodong Sinmun (English)** | English-language articles from North Korea's *Rodong Sinmun* (Workers' Daily), the official newspaper of the Workers' Party of Korea (2018–2022). | 9,797 | [`rodong_sinmun`](./data/rodong_sinmun) |
-| **Blue House Petitions** | Citizen petitions submitted to the Moon Jae-in administration's Blue House National Petition system (2017–2018). Includes petition text, category, vote count, and response status. 5% sample of the full corpus. | 18,077 | [`bluehouse_petitions`](./data/bluehouse_petitions) |
+
+### Literature
+
+| Corpus | Description | Rows | Folder |
+|--------|-------------|------|--------|
 | **KPoEM** | Korean poetry by five canonical modern poets (Yun Dong-ju, Kim So-wol, Han Yong-un, Im Hwa, Yi Sang), annotated with 44 fine-grained emotion categories by five human annotators. Includes line-level and poem-level datasets. | 7,622 | [`kpoem`](./data/kpoem) |
-| **Korean Newspaper Archive (1883–1952)** | Articles from 39 Korean newspapers spanning the late Joseon, colonial, and early Republic periods. Extracted from the OKHC (National Library of Korea). Public domain. | 364,409 | [`korean_newspaper_archive`](./data/korean_newspaper_archive) |
+
+### Survey & Interview Data
+
+| Corpus | Description | Rows | Folder |
+|--------|-------------|------|--------|
+| **Immigrant Interviews** | Open-text survey responses from South Koreans explaining immigrant admission preferences. | 1,008 | [`immigrant_interviews`](./data/immigrant_interviews) |
+| **North Korean Migrant Interviews** | Open-text explanations of attitudes toward North Korean migrant integration. | 6,027 | [`nkmigrants_interviews`](./data/nkmigrants_interviews) |
 
 ---
 
