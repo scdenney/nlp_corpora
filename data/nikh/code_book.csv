@@ -9,4 +9,3 @@ publisher,"Publishing institution or company. Placeholder for now — to be extr
 year,Year of textbook publication.
 num_sections,"Number of structural sections (e.g., chapters, units) listed in the book metadata. Calculated from the sections field in nikh_books.jsonl."
 full_text,"Fully digitized text, with no pre-processing or cleaning."
-clean_text,"Text cleaned, with moderate pre-processing. Ready for initial analysis."
