@@ -1,5 +1,10 @@
 # NLP Corpora for Korean Studies
 
+![Corpora](https://img.shields.io/badge/Corpora-14-blue)
+![Sources](https://img.shields.io/badge/Total%20Rows-440K%2B-green)
+![Language](https://img.shields.io/badge/Language-Korean-red)
+![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey)
+
 A curated collection of text corpora for digital humanities and computational social science research on Korea. These datasets support students, researchers, and instructors at the Leiden Institute for Area Studies and beyond who are interested in applying computational methods to Korean-language primary sources.
 
 This repository is maintained by **Steven Denney** (Leiden University). Additional corpora will be added over time.
@@ -17,6 +22,7 @@ All corpora are located in the [`/data`](./data) folder. Each folder contains da
 | **Korean Newspaper Archive (1883–1952)** | Articles from 39 Korean newspapers spanning the late Joseon, Korean Empire, colonial, and early Republic periods. Major titles include Hwangseong Sinmun, Daehan Maeil Sinbo, and Dongnip Sinmun. | 364,409 | [`korean_newspaper_archive`](./data/korean_newspaper_archive) |
 | **Colonial-Era Magazines (1896–1943)** | Articles from 19 Korean magazines of the late Joseon and colonial periods, including Kaebyok, Samcheolli, Byeolgeongon, and Donggwang. Covers intellectual debate, nationalism, literature, and social reform. | 15,326 | [`colonial_magazines`](./data/colonial_magazines) |
 | **NIKH History Textbooks** | Korean history textbooks from the National Institute of Korean History (NIKH) and additional sources, spanning late Joseon through contemporary national curricula. | 67 | [`nikh`](./data/nikh) |
+| **Korean Pseudohistory Primary Sources** | Full OCR-extracted text of 9 Korean primary source texts central to the study of pseudohistory (유사역사학), including 환단고기, 규원사화, 단기고사, 부도지, 화랑세기, and reference texts. 764 pages, 1M+ characters in hangul and hanja. | 9 | [`korean_pseudohistory`](./data/korean_pseudohistory) |
 
 ### North Korean Texts
 

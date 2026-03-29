@@ -9,6 +9,7 @@ This folder contains all corpora in the repository. Each dataset has its own sub
 | **Korean Newspaper Archive** | [`korean_newspaper_archive`](./korean_newspaper_archive) | 364,409 | 1883–1952 |
 | **Colonial-Era Magazines** | [`colonial_magazines`](./colonial_magazines) | 15,326 | 1896–1943 |
 | **NIKH History Textbooks** | [`nikh`](./nikh) | 67 | 1895–2016 |
+| **Korean Pseudohistory Primary Sources** | [`korean_pseudohistory`](./korean_pseudohistory) | 9 texts (764 pages, 1M+ chars) | Claimed ancient–20th c. |
 
 ### North Korean Texts
 
