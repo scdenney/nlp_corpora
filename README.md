@@ -1,8 +1,26 @@
 # NLP Corpora for Korean Studies
 
+```
+    ┌──────────────────────────────────────────────────────────────────┐
+    │                                                                  │
+    │      ╔══════════════════════════════════════════════════╗         │
+    │      ║  한국학 자연어처리 코퍼스                           ║         │
+    │      ║  NLP Corpora for Korean Studies                  ║         │
+    │      ╚══════════════════════════════════════════════════╝         │
+    │                                                                  │
+    │   신문 · 잡지 · 연설문 · 교과서 · 역사서 · 시 · 설문 · 트위터     │
+    │   Newspapers · Magazines · Speeches · Textbooks · Historical     │
+    │   Texts · Poetry · Surveys · Social Media                        │
+    │                                                                  │
+    │   14 corpora  ·  440K+ rows  ·  한글 + 漢字                       │
+    │                                                                  │
+    └──────────────────────────────────────────────────────────────────┘
+```
+
 ![Corpora](https://img.shields.io/badge/Corpora-14-blue)
 ![Sources](https://img.shields.io/badge/Total%20Rows-440K%2B-green)
-![Language](https://img.shields.io/badge/Language-Korean-red)
+![Hangul](https://img.shields.io/badge/Language-한글%20Korean-red)
+![Hanja](https://img.shields.io/badge/Script-漢字%20Hanja-purple)
 ![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey)
 
 A curated collection of text corpora for digital humanities and computational social science research on Korea. These datasets support students, researchers, and instructors at the Leiden Institute for Area Studies and beyond who are interested in applying computational methods to Korean-language primary sources.
