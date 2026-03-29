@@ -1,23 +1,5 @@
 # Korean Pseudohistory Primary Sources Corpus
 
-<div align="center">
-
-```
- _____ _____ _____ _____ _____ _____ _____ _____ _____
-|     |     |     |     |     |     |     |     |     |
-| HWN | GYW | DNG | DNG | BDJ | HWR | JSN | DMG | BLH |
-| DAN | SAH | GOS | GOS |     | SGI | SGS | SNS | GO  |
-| GOG | WA  | A-1 | A-2 |     |     |     |     |     |
-|_____|_____|_____|_____|_____|_____|_____|_____|_____|
-```
-
-**9 primary source texts &middot; 764 pages &middot; 1,070,459 characters**
-
-*Korean Pseudohistory Primary Sources*<br>
-*한국 유사역사학 원전 코퍼스*
-
-</div>
-
 ![Sources](https://img.shields.io/badge/Sources-9%20texts-blue)
 ![Pages](https://img.shields.io/badge/Pages-764-green)
 ![Characters](https://img.shields.io/badge/Characters-1.07M-orange)

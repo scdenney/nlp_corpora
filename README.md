@@ -1,22 +1,5 @@
 # NLP Corpora for Korean Studies
 
-```
-    ┌──────────────────────────────────────────────────────────────────┐
-    │                                                                  │
-    │      ╔══════════════════════════════════════════════════╗         │
-    │      ║  한국학 자연어처리 코퍼스                           ║         │
-    │      ║  NLP Corpora for Korean Studies                  ║         │
-    │      ╚══════════════════════════════════════════════════╝         │
-    │                                                                  │
-    │   신문 · 잡지 · 연설문 · 교과서 · 역사서 · 시 · 설문 · 트위터     │
-    │   Newspapers · Magazines · Speeches · Textbooks · Historical     │
-    │   Texts · Poetry · Surveys · Social Media                        │
-    │                                                                  │
-    │   14 corpora  ·  440K+ rows  ·  한글 + 漢字                       │
-    │                                                                  │
-    └──────────────────────────────────────────────────────────────────┘
-```
-
 ![Corpora](https://img.shields.io/badge/Corpora-14-blue)
 ![Sources](https://img.shields.io/badge/Total%20Rows-440K%2B-green)
 ![Hangul](https://img.shields.io/badge/Language-한글%20Korean-red)
