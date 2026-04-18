@@ -1,104 +1,100 @@
 # NLP Corpora for Korean Studies
 
-![Corpora](https://img.shields.io/badge/Corpora-14-blue)
-![Sources](https://img.shields.io/badge/Total%20Rows-440K%2B-green)
-![Hangul](https://img.shields.io/badge/Language-한글%20Korean-red)
-![Hanja](https://img.shields.io/badge/Script-漢字%20Hanja-purple)
+![Collections](https://img.shields.io/badge/Collections-15-blue)
+![Primary Rows](https://img.shields.io/badge/Primary%20Rows-440K%2B-green)
+![Coverage](https://img.shields.io/badge/Coverage-1883%20to%202022-orange)
 ![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey)
 
-A curated collection of text corpora for digital humanities and computational social science research on Korea. These datasets support students, researchers, and instructors at the Leiden Institute for Area Studies and beyond who are interested in applying computational methods to Korean-language primary sources.
+A curated collection of Korean-language and Korea-focused text corpora for digital humanities, Korean studies, and computational social science. The repository brings together historical newspapers and magazines, political speech and petition data, social media, literary corpora, and survey text in a single, well-documented working collection.
 
-This repository is maintained by **Steven Denney** (Leiden University). Additional corpora will be added over time.
+Maintained by **Steven Denney** (Leiden University). Each dataset folder includes a `README.md` with source notes, variable descriptions, file details, and reuse guidance.
 
----
+[Browse the data catalog](./data) · [External resources](#external-resources) · [Citation](#citation) · [Contact](#contact)
 
-## Corpora
+## At a Glance
 
-All corpora are located in the [`/data`](./data) folder. Each folder contains data files and documentation.
+| Scope                 | Details                                                                                   |
+|:----------------------|:------------------------------------------------------------------------------------------|
+| Local collections     | 15 dataset folders: 14 primary corpora plus a dedicated *Kaebyok* collection              |
+| Coverage              | Late Joseon to the 2020s, with premodern reference texts in the pseudohistory corpus      |
+| Scale                 | 440,047 records across the 14 primary corpora, counted at each corpus's main working unit |
+| Formats               | CSV, TSV, Parquet, JSONL, and companion PDFs                                              |
+| Languages and scripts | Korean, mixed Hangul-Hanja, Classical Chinese, Japanese, and English                      |
 
-### Historical Sources
+## Why This Repository
 
-| Corpus | Description | Rows | Folder |
-|--------|-------------|------|--------|
-| **Korean Newspaper Archive (1883–1952)** | Articles from 39 Korean newspapers spanning the late Joseon, Korean Empire, colonial, and early Republic periods. Major titles include Hwangseong Sinmun, Daehan Maeil Sinbo, and Dongnip Sinmun. | 364,409 | [`korean_newspaper_archive`](./data/korean_newspaper_archive) |
-| **Colonial-Era Magazines (1896–1943)** | Articles from 19 Korean magazines of the late Joseon and colonial periods, including Kaebyok, Samcheolli, Byeolgeongon, and Donggwang. Covers intellectual debate, nationalism, literature, and social reform. | 15,326 | [`colonial_magazines`](./data/colonial_magazines) |
-| **NIKH History Textbooks** | Korean history textbooks from the National Institute of Korean History (NIKH) and additional sources, spanning late Joseon through contemporary national curricula. | 67 | [`nikh`](./data/nikh) |
-| **Korean Pseudohistory Primary Sources** | Full OCR-extracted text of 9 Korean primary source texts central to the study of pseudohistory (유사역사학), including 환단고기, 규원사화, 단기고사, 부도지, 화랑세기, and reference texts. 764 pages, 1M+ characters in hangul and hanja. | 9 | [`korean_pseudohistory`](./data/korean_pseudohistory) |
+- Brings together corpora that are usually scattered across archives, project repositories, and personal research workflows.
+- Keeps dataset-level documentation close to the data so users can move from discovery to analysis without guesswork.
+- Favors analysis-ready formats such as Parquet, CSV, TSV, and JSONL while preserving context about sources, licenses, and limitations.
 
-### North Korean Texts
+## How to Use This Repository
 
-| Corpus | Description | Rows | Folder |
-|--------|-------------|------|--------|
-| **Rodong Sinmun (English)** | English-language articles from North Korea's *Rodong Sinmun* (Workers' Daily), the official newspaper of the Workers' Party of Korea (2018–2022). | 9,797 | [`rodong_sinmun`](./data/rodong_sinmun) |
-| **Kyŏngje Yŏngu** | Articles from a North Korean economics journal (1987–2017). | 2,583 | [`kyongje_yongu`](./data/kyongje_yongu) |
+1. Start with the [`data/`](./data) catalog to identify the corpus that matches your topic, period, or format needs.
+2. Open the dataset-level `README.md` inside the corpus folder before using the files.
+3. Use Parquet for large-scale analysis when available, and CSV or TSV when you need maximum interoperability.
+4. Check the source and license notes in the dataset folder before redistribution or publication.
 
-### South Korean Politics
+```python
+import pandas as pd
 
-| Corpus | Description | Rows | Folder |
-|--------|-------------|------|--------|
-| **Presidential Speeches** | Korean presidential speeches from Rhee Syngman through Moon Jae-in. | 8,771 | [`president_speeches`](./data/president_speeches) |
-| **Blue House Petitions** | Citizen petitions submitted to the Moon Jae-in administration's Blue House National Petition system (2017–2018). Includes petition text, category, vote count, and response status. 5% sample of the full corpus. | 18,077 | [`bluehouse_petitions`](./data/bluehouse_petitions) |
-| **Inter-Korean Summit Corpus** | Newspaper article coverage of the 2000, 2007, and 2018 inter-Korean summits from *Chosun Ilbo* and *Hankyoreh*. | 455 | [`inter_korean_summit`](./data/inter_korean_summit) |
+df = pd.read_parquet("data/korean_newspaper_archive/korean_newspaper_archive.parquet")
+```
 
-### Media & Social Media
+## Corpus Catalog
 
-| Corpus | Description | Rows | Folder |
-|--------|-------------|------|--------|
-| **Moon Jae-in Twitter** | Tweets from President Moon Jae-in's official account (2012–2020). | 3,148 | [`moon_twitter`](./data/moon_twitter) |
-| **Korean Newspapers on Twitter** | Tweets from six major South Korean newspapers (July–August 2017). | 2,748 | [`kr_newspapers`](./data/kr_newspapers) |
+| Corpus                                                              | Theme                 | Coverage                            | Scale                           | Formats        | Highlights                                                                      |
+|:--------------------------------------------------------------------|:----------------------|:------------------------------------|:--------------------------------|:---------------|:--------------------------------------------------------------------------------|
+| [Korean Newspaper Archive](./data/korean_newspaper_archive)         | Historical newspapers | 1883–1952                           | 364,409 articles                | Parquet, CSV   | 39 newspapers from the late Joseon period through the early Republic            |
+| [Colonial-Era Magazines](./data/colonial_magazines)                 | Historical magazines  | 1896–1943                           | 15,326 articles                 | Parquet, CSV   | 19 magazines including *Kaebyok*, *Samcheolli*, *Byeolgeongon*, and *Donggwang* |
+| [NIKH History Textbooks](./data/nikh)                               | Textbooks             | 1895–2016                           | 67 textbooks                    | CSV            | Curriculum-linked history textbook corpus with sentence-level derivatives       |
+| [Korean Pseudohistory Primary Sources](./data/korean_pseudohistory) | Primary texts         | Premodern claims to modern editions | 9 texts / 764 pages             | JSONL, Parquet | OCR-extracted source texts with document-level metadata                         |
+| [Rodong Sinmun (English)](./data/rodong_sinmun)                     | DPRK media            | 2018–2022                           | 9,797 articles                  | CSV            | English-language DPRK state newspaper coverage                                  |
+| [Kyŏngje Yŏngu](./data/kyongje_yongu)                               | DPRK journal          | 1987–2017                           | 2,583 articles                  | CSV            | North Korean economics journal                                                  |
+| [Presidential Speeches](./data/president_speeches)                  | South Korean politics | 1948–2022                           | 8,771 speeches                  | CSV            | Presidents from Rhee Syngman to Moon Jae-in                                     |
+| [Blue House Petitions](./data/bluehouse_petitions)                  | Civic petitions       | 2017–2018                           | 18,077 petitions                | CSV            | 5% stratified sample with petition text, votes, and response status             |
+| [Inter-Korean Summit Corpus](./data/inter_korean_summit)            | Newspaper coverage    | 2000, 2007, 2018                    | 18,018 sentences / 455 articles | CSV            | *Chosun Ilbo* and *Hankyoreh* summit coverage                                   |
+| [Moon Jae-in Twitter](./data/moon_twitter)                          | Social media          | 2012–2020                           | 3,148 tweets                    | CSV            | Official account history with derived period variables                          |
+| [Korean Newspapers on Twitter](./data/kr_newspapers)                | Social media          | July–August 2017                    | 2,748 tweets                    | CSV            | Six major newspaper accounts with ideology mapping                              |
+| [KPoEM](./data/kpoem)                                               | Literature            | Colonial and post-liberation era    | 7,622 annotations               | TSV            | Poem-level and line-level emotion annotations                                   |
+| [Immigrant Interviews](./data/immigrant_interviews)                 | Survey text           | Cross-sectional                     | 1,008 responses                 | CSV            | Open-text explanations for immigrant preference choices                         |
+| [North Korean Migrant Interviews](./data/nkmigrants_interviews)     | Survey text           | Cross-sectional                     | 6,027 responses                 | CSV            | Vote, hire, and neighbor tasks on co-ethnic migrant integration                 |
 
-### Literature
+## Focused Collection
 
-| Corpus | Description | Rows | Folder |
-|--------|-------------|------|--------|
-| **KPoEM** | Korean poetry by five canonical modern poets (Yun Dong-ju, Kim So-wol, Han Yong-un, Im Hwa, Yi Sang), annotated with 44 fine-grained emotion categories by five human annotators. Includes line-level and poem-level datasets. | 7,622 | [`kpoem`](./data/kpoem) |
-
-### Survey & Interview Data
-
-| Corpus | Description | Rows | Folder |
-|--------|-------------|------|--------|
-| **Immigrant Interviews** | Open-text survey responses from South Koreans explaining immigrant admission preferences. | 1,008 | [`immigrant_interviews`](./data/immigrant_interviews) |
-| **North Korean Migrant Interviews** | Open-text explanations of attitudes toward North Korean migrant integration. | 6,027 | [`nkmigrants_interviews`](./data/nkmigrants_interviews) |
-
----
+| Collection                                | Coverage  | Scale          | Format | Notes                                                               |
+|:------------------------------------------|:----------|:---------------|:-------|:--------------------------------------------------------------------|
+| [Kaebyok Magazine Corpus](./data/kaebyok) | 1920–1935 | 2,467 articles | CSV    | Standalone *Kaebyok* corpus with issue-level metadata and full text |
 
 ## External Resources
 
-The following large-scale corpora are hosted externally and may be useful for Korean studies research. They are not included in this repository due to size and licensing constraints (all carry non-commercial licenses), but they are freely accessible for academic use.
+Large-scale corpora that are useful for Korean studies but are hosted elsewhere due to size or licensing constraints:
 
-| Corpus | Description | Size | License | Link |
-|--------|-------------|------|---------|------|
-| **Open Korean Historical Corpus (OKHC)** | A diachronic collection spanning 1,300 years of Korean textual production, drawn from 19 archives including the Annals of the Joseon Dynasty, Diaries of the Royal Secretariat, Korean Literary Collections (ITKC), colonial-era newspapers, and KCNA. Covers Korean (Middle, Early Modern, Modern, North Korean), Classical Chinese, and Japanese. Approximately 42% of documents include full text; the remainder are metadata with links to original sources. | 17.7M documents, 5.1B tokens | CC BY-NC 4.0 | [HuggingFace](https://huggingface.co/datasets/seyoungsong/Open-Korean-Historical-Corpus) |
-| **LBOX OPEN** | Korean court precedents from the Supreme Court, appellate courts, and district courts. Includes case text, classification labels, and summarization data. Useful for studying judicial reasoning, legal language, and institutional change in South Korea. | 147K precedents, 259M tokens | CC BY-NC 4.0 | [HuggingFace](https://huggingface.co/datasets/lbox/lbox_open) |
-| **Namuwiki Corpus** | Full text of Namuwiki, South Korea's most popular user-generated wiki. Far richer than Korean Wikipedia for Korean pop culture, politics, internet culture, and social issues. Written in informal contemporary Korean. | 867K articles, ~3GB | CC BY-NC-SA 2.0 | [HuggingFace](https://huggingface.co/datasets/heegyu/namuwiki) |
-
----
+| Resource                                                                                                          | Coverage                                | Scale                        | Access       |
+|:------------------------------------------------------------------------------------------------------------------|:----------------------------------------|:-----------------------------|:-------------|
+| [Open Korean Historical Corpus (OKHC)](https://huggingface.co/datasets/seyoungsong/Open-Korean-Historical-Corpus) | Diachronic Korean textual production    | 17.7M documents, 5.1B tokens | Hugging Face |
+| [LBOX OPEN](https://huggingface.co/datasets/lbox/lbox_open)                                                       | South Korean court precedents           | 147K precedents, 259M tokens | Hugging Face |
+| [Namuwiki Corpus](https://huggingface.co/datasets/heegyu/namuwiki)                                                | Contemporary user-generated Korean wiki | 867K articles, ~3 GB         | Hugging Face |
 
 ## Intended Audience
 
-- Students in Korean Studies and related area studies programs
+- Students in Korean studies and related area studies programs
 - Researchers in digital humanities and computational social science
-- Instructors developing courses on text analysis or computational methods
-- Graduate students working on theses or independent research
-
----
+- Instructors building courses on text analysis or computational methods
+- Graduate students working on theses, replication studies, and independent projects
 
 ## Citation
 
-If you use materials from this repository, please cite as:
+If you use this repository, cite the repository-level [`CITATION.cff`](./CITATION.cff) file or use the reference below:
 
-> Denney, Steven. (2025). *NLP Corpora for Korean Studies*. GitHub repository. https://github.com/scdenney/nlp_corpora
+> Denney, Steven. (2026). *NLP Corpora for Korean Studies*. GitHub repository.
+> <https://github.com/scdenney/nlp_corpora>
 
-For individual datasets, please also cite the original sources documented in each folder's README.
-
----
+For dataset-specific attribution, also cite the original source or publication documented in the dataset folder.
 
 ## License
 
-See [LICENSE](./LICENSE) for details.
-
----
+This repository is released under [CC BY-NC 4.0](./LICENSE). Some individual corpora carry their own upstream licenses or public-domain status, so always check the dataset-level `README.md` before reuse.
 
 ## Contact
 
-Steven Denney, Leiden University (s.c.denney@hum.leidenuniv.nl)
+Steven Denney, Leiden University (<s.c.denney@hum.leidenuniv.nl>)

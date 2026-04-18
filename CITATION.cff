@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using the metadata below."
+type: dataset
+title: "NLP Corpora for Korean Studies"
+authors:
+  - family-names: "Denney"
+    given-names: "Steven"
+repository-code: "https://github.com/scdenney/nlp_corpora"
+url: "https://github.com/scdenney/nlp_corpora"
+date-released: 2026-04-18
+license: "CC-BY-NC-4.0"
+abstract: "Curated Korean-language and Korea-focused text corpora for digital humanities, Korean studies, and computational social science research."
+keywords:
+  - "korean-studies"
+  - "digital-humanities"
+  - "corpora"
+  - "natural-language-processing"
+  - "computational-social-science"
