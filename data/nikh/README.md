@@ -11,8 +11,9 @@ An online-navigable version of the original textbooks is available through the N
 | File | Description | Rows |
 |------|-------------|------|
 | **nikh_corpus.csv** | Full textbook corpus with book-level metadata and text | 67 |
-| **nikh_sentences.csv** | Corpus split into individual sentences (kiwipiepy) | 188,259 |
-| **nikh_sentences_25percent.csv** | 25% stratified random sample of sentences | 47,065 |
+| **nikh_sentences.csv** | Corpus split into individual sentences (kiwipiepy) | 189,841 |
+| **nikh_sentences_25percent.csv** | 25% stratified random sample of sentences (by period × level, seed=42) | 47,462 |
+| **CLEANING_v2_REPORT.md** | OCR cleanup v2 report (per-book and per-step deltas) | — |
 | **code_book.csv** | Variable definitions for the corpus | — |
 
 ---
@@ -32,7 +33,7 @@ An online-navigable version of the original textbooks is available through the N
 | **publisher** | string | Publishing institution or company (Korean). `Unknown` for 5 pre-modern books where the publisher could not be identified. |
 | **year** | integer | Year of textbook publication. Range: 1895–2016. See note on approximate dates below. |
 | **num_sections** | integer | Number of structural sections (chapters, units). |
-| **full_text** | string | Full digitized text with no preprocessing. |
+| **full_text** | string | Digitized textbook text. NIKH-archive entries (`ta_*`) are clean digital text; GEI-archive entries (`H-*`) are DeepSeek-OCR'd from PDFs and have been passed through a v2 cleanup that strips pipeline headers, page-divider markers (`--- Page N ---`), multi-line OCR repetitions, empty HTML table fragments, library catalog blocks, LaTeX math residue, standalone Hanja-only short lines, and other DeepSeek-OCR artifacts. See `CLEANING_v2_REPORT.md`. |
 | **notes** | string | Curatorial notes, e.g., provenance or inferences about metadata. 51 missing. |
 | **num_pages** | float | Total number of pages in the textbook. Available for H-series books only; 51 missing. |
 
