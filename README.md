@@ -56,8 +56,8 @@ df = pd.read_parquet("data/korean_newspaper_archive/korean_newspaper_archive.par
 | [Moon Jae-in Twitter](./data/moon_twitter)                          | Social media          | 2012–2020                           | 3,148 tweets                    | CSV            | Official account history with derived period variables                          |
 | [Korean Newspapers on Twitter](./data/kr_newspapers)                | Social media          | July–August 2017                    | 2,748 tweets                    | CSV            | Six major newspaper accounts with ideology mapping                              |
 | [KPoEM](./data/kpoem)                                               | Literature            | Colonial and post-liberation era    | 7,622 annotations               | TSV            | Poem-level and line-level emotion annotations                                   |
-| [Immigrant Interviews](./data/immigrant_interviews)                 | Survey text           | Cross-sectional                     | 1,008 responses                 | CSV            | Open-text explanations for immigrant preference choices                         |
-| [North Korean Migrant Interviews](./data/nkmigrants_interviews)     | Survey text           | Cross-sectional                     | 6,027 responses                 | CSV            | Vote, hire, and neighbor tasks on co-ethnic migrant integration                 |
+| [Immigrant Interviews](./data/immigrant_interviews)                 | Survey text           | February 2019                       | 1,008 responses                 | CSV            | Open-text explanations for immigrant preference choices                         |
+| [North Korean Migrant Interviews](./data/nkmigrants_interviews)     | Survey text           | August–September 2021               | 6,027 responses                 | CSV            | Vote, hire, and neighbor tasks on co-ethnic migrant integration                 |
 
 ## Focused Collection
 
