@@ -11,7 +11,7 @@ This folder contains newspaper coverage of the 2000, 2007, and 2018 inter-Korean
 | Coverage        | 2000, 2007, and 2018 inter-Korean summits                  |
 | Sources         | *Chosun Ilbo* and *Hankyoreh*                              |
 | Main file       | `inter_korean_summit_sentences.csv`                        |
-| Total size      | 18,018 sentences and 455 reconstructed articles            |
+| Total size      | 18,018 sentences and 453 reconstructed articles            |
 | Format          | UTF-8 CSV                                                  |
 | Upstream source | Jin Hee Park, *Inter-Korean summit corpus* (Mendeley Data) |
 
@@ -20,7 +20,7 @@ This folder contains newspaper coverage of the 2000, 2007, and 2018 inter-Korean
 | File                                           | Description                                                                      |   Rows |
 |:-----------------------------------------------|:---------------------------------------------------------------------------------|-------:|
 | `inter_korean_summit_sentences.csv`            | Main corpus. One row per sentence with newspaper, year, summit episode, and text | 18,018 |
-| `inter_korean_summit_articles.csv`             | Reconstructed article-level corpus for the full dataset                          |    455 |
+| `inter_korean_summit_articles.csv`             | Reconstructed article-level corpus for the full dataset                          |    453 |
 | `inter_korean_summit_articles_chosun_ilbo.csv` | Reconstructed article-level file for *Chosun Ilbo*                               |    235 |
 | `inter_korean_summit_articles_hankyoreh.csv`   | Reconstructed article-level file for *Hankyoreh*                                 |    220 |
 | `inter_korean_summit_2018_articles.csv`        | Cleaner 2018 article-level subset built from local source files                  |    252 |
@@ -59,6 +59,11 @@ Start with `inter_korean_summit_sentences.csv` for most analysis. The article-le
 - All files are UTF-8 CSVs.
 - The article-level files are best treated as research conveniences rather than archival originals.
 - The sentence-level file remains the most stable, analysis-ready version of the corpus.
+
+## Data Quality Notes
+
+- `?` characters appearing adjacent to Korean characters (pattern `[가-힣]?`) occur in 450 sentences and 152 articles. These are encoding artifacts from the original source text conversion and represent lost characters, not literal question marks.
+- The 2018-specific file (`inter_korean_summit_2018_articles.csv`) uses a separate `doc_id` namespace and cannot be joined to the main `inter_korean_summit_articles.csv` on `doc_id`.
 
 ## Source and Attribution
 

@@ -4,7 +4,7 @@
 
 This corpus contains 18,077 citizen petitions submitted to the Moon Jae-in administration's Blue House (Cheong Wa Dae) National Petition system between **August 2017 and December 2018**. This is a 5% stratified sample of the full petition archive (~361,000 petitions).
 
-The National Petition system was launched in August 2017 as a signature initiative of the Moon administration, allowing citizens to submit petitions on any topic. Petitions that gathered 200,000 or more signatures within 30 days received an official government response. The system became a major channel for Korean civic discourse, with petitions addressing political reform, human rights, gender equality, national security, education, and economic policy.
+The National Petition system was launched in August 2017 as a signature initiative of the Moon administration, allowing citizens to submit petitions on any topic. Petitions that gathered 200,000 or more signatures within their allotted window received an official government response. The platform supported petition windows of 7, 15, 30, 60, and 90 days; 608 petitions in this corpus ran for non-30-day durations. The system became a major channel for Korean civic discourse, with petitions addressing political reform, human rights, gender equality, national security, education, and economic policy.
 
 This data was sourced from the [akngs/petitions project](https://github.com/akngs/petitions). The petition data is released under the Korean Open Government License (KOGL) Type 1, which permits reuse, redistribution, and commercial use with attribution.
 
@@ -57,6 +57,7 @@ This data was sourced from the [akngs/petitions project](https://github.com/akng
 - No missing values in any field.
 - Content field uses escaped newlines (`\n` as literal two-character strings) to preserve CSV row structure. Convert to actual newlines if needed for display.
 - Some petition content may include personal information (names, phone numbers, addresses) that petitioners voluntarily included. Exercise appropriate caution.
+- **123 rows** are duplicate petition submissions: the same start date, end date, title, and content appear under different `article_id` values, indicating users resubmitting the same petition. For NLP tasks, deduplicate by keeping the lowest `article_id` per group.
 
 ---
 

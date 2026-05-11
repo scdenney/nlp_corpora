@@ -20,23 +20,23 @@ All texts were OCR-extracted from Korean-language PDFs using **Qwen3-VL-32B-Inst
 
 ## Documents
 
-| # | Title (Korean) | Title (English) | Author | Date | Pages | Chars | Authenticity |
-|---|----------------|-----------------|--------|------|-------|-------|-------------|
-| 1 | 환단고기 | Record of Hwan and Dan | 계연수 (comp.) | Claimed 73–1520 CE; likely 20th c. | 151 | 194,342 | Disputed forgery |
-| 2 | 규원사화 | Record of the Search for the Origin | 북애자 | Claimed 1675; likely 20th c. | 59 | 98,487 | Disputed forgery |
-| 3 | 단기고사 원문 | Original Text of the Dangi Gosa | 대야발 | Claimed ancient; likely modern | 197 | 198,562 | Disputed forgery |
-| 4 | 단기고사 | Dangi Gosa (alternate edition) | 대야발 | Claimed ancient; likely modern | 76 | 95,482 | Disputed forgery |
-| 5 | 부도지 | Record of the Capital of the Buddha | 박제상 (attrib.) | Claimed 5th c.; published 1986 | 42 | 53,306 | Disputed forgery |
-| 6 | 화랑세기 | Chronicle of the Hwarang | 김대문 (attrib.) | Claimed 8th c.; discovered 1989 | 26 | 22,488 | Actively debated |
-| 7 | 조선상고사 | Ancient History of Korea | 신채호 | 1924–1931 | 149 | 338,659 | Authentic (nationalist) |
-| 8 | 동몽선습 | Elementary Learning for Children | 박세무 | 1541 | 25 | 17,257 | Authentic |
-| 9 | 발해고 | Study of Balhae | 유득공 | 1784 | 39 | 51,876 | Authentic |
+| doc_id | Title (Korean) | Title (English) | Author | Date | Pages | Chars | authenticity_status |
+|--------|----------------|-----------------|--------|------|-------|-------|---------------------|
+| DOC_0039 | 환단고기 | Record of Hwan and Dan | 계연수 (comp.) | Claimed 73–1520 CE; likely 20th c. | 151 | 194,342 | disputed_forgery |
+| DOC_0040 | 규원사화 | Record of the Search for the Origin | 북애자 | Claimed 1675; likely 20th c. | 59 | 98,487 | disputed_forgery |
+| DOC_0041 | 단기고사 원문 | Original Text of the Dangi Gosa | 대야발 | Claimed ancient; likely modern | 197 | 198,562 | disputed_forgery |
+| DOC_0042 | 단기고사 | Dangi Gosa (alternate edition) | 대야발 | Claimed ancient; likely modern | 76 | 95,482 | disputed_forgery |
+| DOC_0043 | 부도지 | Record of the Capital of the Buddha | 박제상 (attrib.) | Claimed 5th c.; published 1986 | 42 | 53,306 | disputed_forgery |
+| DOC_0044 | 화랑세기 | Chronicle of the Hwarang | 김대문 (attrib.) | Claimed 8th c.; discovered 1989 | 26 | 22,488 | actively_debated |
+| DOC_0046 | 조선상고사 | Ancient History of Korea | 신채호 | 1924–1931 | 149 | 338,659 | authentic_nationalist |
+| DOC_0047 | 동몽선습 | Elementary Learning for Children | 박세무 | 1541 | 25 | 17,257 | authentic |
+| DOC_0077 | 발해고 | Study of Balhae | 유득공 | 1784 | 39 | 51,876 | authentic |
 
 ---
 
 ## Variables Included
 
-27 fields per document. Each row is one complete text.
+26 fields (JSONL) / 25 fields (Parquet, which omits the `pages` array) per document. Each row is one complete text.
 
 | Variable | Type | Description |
 |----------|------|-------------|
@@ -130,6 +130,7 @@ Pipeline code is available at: [`scdenney/psuedohistory_materials/ocr_pipeline/`
 - 단기고사 원문 (DOC_0040) has the highest hanja density (28.8%) and 6 pages flagged for manual review, likely due to dense classical Chinese text on scanned pages.
 - 동몽선습 (DOC_0042) has 1 page flagged for manual review (likely a blank or near-blank page in the source PDF).
 - Per-page quality scores are available in the JSONL format for downstream filtering.
+- The `total_chars`, `hangul_chars`, and `hanja_chars` values were recomputed after stripping LLM markdown fencing (` ```markdown ... ``` `) from all page texts; earlier pipeline versions may report slightly different counts.
 
 ---
 

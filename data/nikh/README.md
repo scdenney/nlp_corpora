@@ -11,7 +11,7 @@ An online-navigable version of the original textbooks is available through the N
 | File | Description | Rows |
 |------|-------------|------|
 | **nikh_corpus.csv** | Full textbook corpus with book-level metadata and text | 67 |
-| **nikh_sentences.csv** | Corpus split into individual sentences (kiwipiepy) | 189,841 |
+| **nikh_sentences.csv** | Corpus split into individual sentences (kiwipiepy) | 169,844 |
 | **nikh_sentences_25percent.csv** | 25% stratified random sample of sentences (by period × level, seed=42) | 47,462 |
 | **CLEANING_v2_REPORT.md** | OCR cleanup v2 report (per-book and per-step deltas) | — |
 | **code_book.csv** | Variable definitions for the corpus | — |
@@ -120,7 +120,7 @@ The `H-*` identifiers encode publisher ID and edition year in parentheses.
 
 ## Variables in `nikh_sentences.csv`
 
-5 columns. Each row is one sentence extracted from a textbook (189,841 sentences total, from 67 books). Sentences were split using kiwipiepy's `split_into_sents` method and filtered to a minimum length of 2 characters.
+5 columns. Each row is one sentence extracted from a textbook (169,844 sentences total, from 67 books). Sentences were split using kiwipiepy's `split_into_sents` method and filtered to a minimum length of 2 characters.
 
 | Variable | Type | Description |
 |----------|------|-------------|
@@ -167,6 +167,8 @@ These approximate dates are suitable for grouping and visualization but should n
 - `notes` is populated for 16 H-series books and empty for the original ta-series.
 - `num_pages` is available for H-series books only; the ta-series books have `NaN`.
 - `publisher` is `Unknown` for 5 Late Choson books where the publisher could not be identified.
+- The `nikh_sentences.csv` row count (169,844) reflects removal of Markdown heading tokens (`##`, `###`, etc.) and numbered list markers (`1\.`, `2.`) from the H-series OCR pipeline, which were non-sentence artifacts. Duplicate rows were also removed.
+- One U+FFFD character in `H-54(2,2016)` marks an OCR failure at a circled-number character beyond the CJK Enclosed Alphanumerics block; it should not be stripped silently.
 
 ---
 

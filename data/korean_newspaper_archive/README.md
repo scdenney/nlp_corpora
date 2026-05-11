@@ -52,8 +52,8 @@ Plus 31 additional smaller newspapers.
 | Hanmun (Classical Chinese) | 26,995 |
 | English | 17,681 |
 | Early Modern Korean | 3,102 |
-| Korean (unspecified) | 964 |
-| Japanese | 22 |
+| Korean | 928 |
+| Japanese | 58 |
 
 ---
 

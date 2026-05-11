@@ -76,6 +76,10 @@ No missing values are documented in any column.
 - Use `issue_date` or `year` to study censorship, editorial shifts, and the publication hiatus.
 - For cross-title comparisons, use [`../colonial_magazines`](../colonial_magazines) instead.
 
+## Data Quality Notes
+
+- **U+FFFD replacement characters:** 279 of 2,467 rows (11.3%) contain at least one U+FFFD replacement character in the `text` column (576 total occurrences). These are OCR failures at specific historical Hangul or Hanja glyphs where the source image could not be decoded. They occur mid-word and mark a specific textual lacuna — do not silently strip them, as their presence is informative. Years 1923–1926 are most affected (15–21% of rows); the revival period (1934–1935) has lower rates (2–8%). For downstream NLP, either filter affected rows or treat U+FFFD as an unknown-character token.
+
 ## License and Citation
 
 The magazine content is in the public domain. When citing this corpus, cite the repository and note that this folder is the standalone *Kaebyok* collection within *NLP Corpora for Korean Studies*.

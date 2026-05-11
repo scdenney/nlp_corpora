@@ -27,10 +27,10 @@ This data was sourced from the [NKLM project](https://github.com/cohml/nklm) (MI
 
 | Year | Articles |
 |------|----------|
-| 2018 | 2,628 |
-| 2019 | 2,466 |
-| 2020 | 2,136 |
-| 2021 | 1,649 |
+| 2018 | 2,629 |
+| 2019 | 2,467 |
+| 2020 | 2,135 |
+| 2021 | 1,648 |
 | 2022 | 918 |
 
 The declining article count reflects reduced output from the English-language edition over time, particularly after the onset of COVID-19 border closures in early 2020.
@@ -45,6 +45,13 @@ The following cleaning was applied to the original data:
 - **Whitespace normalization**: Double spaces in article bodies were collapsed to single spaces.
 - **Dropped rows**: 3 rows with embedded newlines and duplicated paragraph content (scraping artifacts) were removed. Original count: 9,800; cleaned count: 9,797.
 - **Duplicate titles**: 836 titles appear more than once (e.g., "Editorial" appears 54 times). These are genuinely different articles with the same headline; all URLs are unique.
+
+---
+
+## Data Quality Notes
+
+- **11 rows** have stub body text: 8 contain only a byline such as "Rodong News Team" with no article content, and 1 (2020-06-08) exhibits a triplicated name artifact.
+- **4 articles** appear twice under different dates. These are genuine DPRK re-publications, not scraping errors.
 
 ---
 

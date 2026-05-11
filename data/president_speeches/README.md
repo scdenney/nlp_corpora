@@ -62,13 +62,13 @@ This corpus contains a collection of Korean presidential speeches covering most 
 
 | Korean | English Translation | Count |
 |--------|---------------------|-------|
-| 국내 | Domestic | 7,524 |
+| 국내 | Domestic | 7,525 |
 | 국제 | International | 755 |
 | 국외 | Overseas | 265 |
 | 해외 | Abroad | 224 |
 | 지역 | Regional | 2 |
 
-Note: 국외 and 해외 both mean "overseas/abroad" and could be merged for analysis. One row has a leading-space data quality issue (` 국내` instead of `국내`).
+Note: 국외 and 해외 both mean "overseas/abroad" and could be merged for analysis. The previously separate ` 국내` (leading-space) row has been cleaned and merged into `국내`; the five values above sum to 8,771.
 
 ---
 
@@ -140,9 +140,10 @@ The following variables are not present in the CSV but can be derived to support
 ## Data Quality Notes
 
 - **208 rows** have missing `date` (2.4%); all other columns are fully populated.
-- The `location` column has one row with a leading space (` 국내` instead of `국내`).
 - 국외 and 해외 are synonymous ("overseas") and appear as separate values; consider merging for analysis.
 - Date formats are inconsistent (3 granularities); automated parsing requires handling all three.
+- **3 pairs of rows** have byte-for-byte identical `speech_text` assigned to different speech titles (division_number pairs: 1310433/1310434, 1306064/1306065, 1307798/1307800). These are likely cases where wrong text was pasted into one row of each pair; they should be corrected against the source database.
+- **464 (president, title) pairs** are non-unique due to recurring annual speeches (e.g., monthly cabinet meetings, annual commemorative addresses).
 
 ---
 

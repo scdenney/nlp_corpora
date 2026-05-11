@@ -1,7 +1,7 @@
 # NLP Corpora for Korean Studies
 
 ![Collections](https://img.shields.io/badge/Collections-15-blue)
-![Primary Rows](https://img.shields.io/badge/Primary%20Rows-440K%2B-green)
+![Primary Rows](https://img.shields.io/badge/Primary%20Rows-420K%2B-green)
 ![Coverage](https://img.shields.io/badge/Coverage-1883%20to%202022-orange)
 ![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey)
 
@@ -17,7 +17,7 @@ Maintained by **Steven Denney** (Leiden University). Each dataset folder include
 |:----------------------|:------------------------------------------------------------------------------------------|
 | Local collections     | 15 dataset folders: 14 primary corpora plus a dedicated *Kaebyok* collection              |
 | Coverage              | Late Joseon to the 2020s, with premodern reference texts in the pseudohistory corpus      |
-| Scale                 | 440,047 records across the 14 primary corpora, counted at each corpus's main working unit |
+| Scale                 | 420,049 records across the 14 primary corpora, counted at each corpus's main working unit |
 | Formats               | CSV, TSV, Parquet, JSONL, and companion PDFs                                              |
 | Languages and scripts | Korean, mixed Hangul-Hanja, Classical Chinese, Japanese, and English                      |
 

@@ -12,11 +12,11 @@ Read more about the journal at [38 North](https://www.38north.org/2025/05/in-mem
 
 ## Variables Included
 
-6 columns, 2,583 rows. Each row is one journal article.
+6 columns, 2,583 rows. Each row is one journal article. (1 true duplicate removed; 2,582 unique titles.)
 
 | Variable | Type | Description |
 |----------|------|-------------|
-| **title** | string | Article title as published in the journal, in DPRK Korean orthography. 2,583 unique values. |
+| **title** | string | Article title as published in the journal, in DPRK Korean orthography. 2,582 unique values. Title uniqueness is not guaranteed: 10 titles appear more than once across different years or authors. |
 | **author** | string | Author(s) listed for the article. 1,619 unique authors. **21 missing values** (likely unsigned editorials). |
 | **year_issue** | string | Combined year and quarterly issue number in `YYYY-N` format (e.g., `1987-1`, `2017-4`). 122 unique values spanning 31 years. The journal is published quarterly (4 issues per year). |
 | **word_count** | integer | Approximate token/word count of the article text. Range: 0–3,346; median: 1,035; mean: 1,040. |

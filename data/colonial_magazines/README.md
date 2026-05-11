@@ -83,6 +83,15 @@ Most articles are in Modern Korean, often with heavy use of Hanja (Chinese chara
 
 ---
 
+## Data Quality Notes
+
+- **846 rows (5.5%)** contain U+FFFD replacement characters in the `text` column, concentrated in 개벽 (273), 별건곤 (245), 삼천리 (191), and 동광 (123). These are OCR failures at specific historical glyphs; their presence marks a textual lacuna and should not be silently stripped.
+- **108 rows** (all from 개벽) have no `date` or `year` value. These are undated issues; attempt date recovery from the issue number in the `id` field if needed.
+- The `language` column includes 5 values: `Modern Korean`, `Hanmun`, `Japanese` (109 rows, mostly 삼천리/동광), `English` (3 rows), and `Korean` (105 rows, all in null-year 개벽 articles — possibly a labeling artifact from a different pipeline version). Researchers should treat `Korean` and `Modern Korean` as potentially equivalent.
+- **3 rows** have empty `article_type`: ids `magazine:ma_013_0500_0122`, `magazine:ma_013_0500_0123`, `magazine:ma_013_0630_0081`.
+
+---
+
 ## License
 
 The magazine articles are in the **public domain**. The OKHC dataset from which this corpus was extracted is licensed under CC BY-NC 4.0. If you use this data, please cite both the OKHC and this repository.
