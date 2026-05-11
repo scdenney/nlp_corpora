@@ -120,7 +120,7 @@ The `H-*` identifiers encode publisher ID and edition year in parentheses.
 
 ## Variables in `nikh_sentences.csv`
 
-5 columns. Each row is one sentence extracted from a textbook (188,259 sentences total, from 67 books). Sentences were split using kiwipiepy's `split_into_sents` method and filtered to a minimum length of 2 characters.
+5 columns. Each row is one sentence extracted from a textbook (189,841 sentences total, from 67 books). Sentences were split using kiwipiepy's `split_into_sents` method and filtered to a minimum length of 2 characters.
 
 | Variable | Type | Description |
 |----------|------|-------------|
