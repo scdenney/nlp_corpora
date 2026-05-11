@@ -73,6 +73,12 @@ The 44 emotion categories follow the KOTE framework. Examples include:
 
 ---
 
+## Text Normalization Note
+
+Yi Sang (이상) wrote many poems without standard Korean word spacing as a deliberate modernist stylistic choice. The upstream KPoEM source preserves this, resulting in 39 segments (poem-level) and 186 lines (line-level) with no inter-word spaces. These have been re-spaced in the `text` column using `kiwipiepy` (v0.22) automatic spacing correction to make the texts tokenizable. The normalization is imperfect for archaic or highly unusual vocabulary — users doing close literary analysis of Yi Sang's work should treat the spacing as an approximation and consult primary sources.
+
+---
+
 ## License
 
 MIT License. See the [original repository](https://github.com/AKS-DHLAB/KPoEM) for details.
