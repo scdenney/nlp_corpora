@@ -19,7 +19,7 @@ This directory contains the local datasets included in the repository. Each corp
 | [Korean Pseudohistory Primary Sources](./korean_pseudohistory) | Primary texts         | Premodern to modern     | 9 texts / 764 pages             | JSONL, Parquet |
 | [Rodong Sinmun (English)](./rodong_sinmun)                     | DPRK media            | 2018–2022               | 9,797 articles                  | CSV            |
 | [Kyŏngje Yŏngu](./kyongje_yongu)                               | DPRK journal          | 1987–2017               | 2,583 articles                  | CSV            |
-| [Presidential Speeches](./president_speeches)                  | South Korean politics | 1948–2022               | 8,771 speeches                  | CSV            |
+| [Presidential Speeches](./president_speeches)                  | South Korean politics | 1948–2022               | 8,774 speeches                  | CSV            |
 | [Blue House Petitions](./bluehouse_petitions)                  | Civic petitions       | 2017–2018               | 18,077 petitions                | CSV            |
 | [Inter-Korean Summit Corpus](./inter_korean_summit)            | Newspaper coverage    | 2000, 2007, 2018        | 18,018 sentences / 455 articles | CSV            |
 | [Moon Jae-in Twitter](./moon_twitter)                          | Social media          | 2012–2020               | 3,148 tweets                    | CSV            |

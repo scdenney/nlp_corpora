@@ -8,7 +8,7 @@ This corpus contains a collection of Korean presidential speeches covering most 
 
 ## Variables Included
 
-7 columns, 8,771 rows. Each row is one speech.
+7 columns, 8,774 rows. Each row is one speech.
 
 | Variable | Type | Description |
 |----------|------|-------------|
@@ -37,7 +37,7 @@ This corpus contains a collection of Korean presidential speeches covering most 
 | 노무현 | No Muhyŏn | Roh Moo-hyun | 780 | 2003–2008 |
 | 이명박 | Yi Myŏngbak | Lee Myung-bak | 1,027 | 2008–2013 |
 | 박근혜 | Pak Kŭnhye | Park Geun-hye | 493 | 2013–2017 |
-| 문재인 | Mun Chaein | Moon Jae-in | 1,389 | 2017–2022 |
+| 문재인 | Mun Chaein | Moon Jae-in | 1,392 | 2017–2022 |
 
 ---
 
@@ -150,3 +150,15 @@ The following variables are not present in the CSV but can be derived to support
 ## File Formats
 
 - **president_speech_ko.csv** — UTF-8 CSV file containing the complete corpus.
+
+---
+
+## Provenance and Updating
+
+Source: the Presidential Archive speech records (대통령기록관 연설기록, <https://www.pa.go.kr/research/contents/speech/>). The archive's catalog mixes three record types; only the speech-text catalog (`c_pa02062`) belongs in this corpus — `c_pa02063` holds video records and `c_pa02064` audio records, neither with transcripts.
+
+**Last synced: 2026-06-12.** The corpus covers the archive's full text catalog (three records added, three mojibake titles repaired — 疑惧, 戰亂, 國賓館 — in the June 2026 sync). The corpus retains ~200 rows the archive has since recategorized or delisted; they remain valid texts.
+
+**윤석열 (Yoon Suk-yeol):** as of June 2026 the archive lists no speech texts for the Yoon presidency yet (records transferred April 2025; ingestion pending — the archive's own search filter already includes him). Re-run `update_speeches.py` periodically; it crawls the catalog, diffs on (president, date, normalized title), and appends new text records. Interim Yoon-era speech texts are available on the government policy-briefing portal (<https://www.korea.kr>, 브리핑룸 → 연설문, KOGL).
+
+Note on IDs: `division_number` for rows added from the current site is the site's `artid`, a different ID space from the legacy values in older rows. The (president, date, title) triple is the stable key.
