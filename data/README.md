@@ -24,6 +24,7 @@ This directory contains the local datasets included in the repository. Each corp
 | [Inter-Korean Summit Corpus](./inter_korean_summit)            | Newspaper coverage    | 2000, 2007, 2018        | 18,018 sentences / 455 articles | CSV            |
 | [Moon Jae-in Twitter](./moon_twitter)                          | Social media          | 2012–2020               | 3,148 tweets                    | CSV            |
 | [Korean Newspapers on Twitter](./kr_newspapers)                | Social media          | July–August 2017        | 2,748 tweets                    | CSV            |
+| [Naver Movie Reviews (Classroom Edition)](./naver_movie_reviews) | Internet language     | Reviews to 2015         | 50,000 reviews                  | CSV            |
 | [KPoEM](./kpoem)                                               | Literature            | Colonial to postwar era | 7,622 annotations               | TSV            |
 | [Immigrant Interviews](./immigrant_interviews)                 | Survey text           | Cross-sectional         | 1,008 responses                 | CSV            |
 | [North Korean Migrant Interviews](./nkmigrants_interviews)     | Survey text           | Cross-sectional         | 6,027 responses                 | CSV            |

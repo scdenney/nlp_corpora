@@ -1,7 +1,7 @@
 # NLP Corpora for Korean Studies
 
-![Collections](https://img.shields.io/badge/Collections-15-blue)
-![Primary Rows](https://img.shields.io/badge/Primary%20Rows-420K%2B-green)
+![Collections](https://img.shields.io/badge/Collections-16-blue)
+![Primary Rows](https://img.shields.io/badge/Primary%20Rows-470K%2B-green)
 ![Coverage](https://img.shields.io/badge/Coverage-1883%20to%202022-orange)
 ![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey)
 
@@ -15,9 +15,9 @@ Maintained by **Steven Denney** (Leiden University). Each dataset folder include
 
 | Scope                 | Details                                                                                   |
 |:----------------------|:------------------------------------------------------------------------------------------|
-| Local collections     | 15 dataset folders: 14 primary corpora plus a dedicated *Kaebyok* collection              |
+| Local collections     | 16 dataset folders: 15 primary corpora plus a dedicated *Kaebyok* collection              |
 | Coverage              | Late Joseon to the 2020s, with premodern reference texts in the pseudohistory corpus      |
-| Scale                 | 420,049 records across the 14 primary corpora, counted at each corpus's main working unit |
+| Scale                 | 470,049 records across the 15 primary corpora, counted at each corpus's main working unit |
 | Formats               | CSV, TSV, Parquet, JSONL, and companion PDFs                                              |
 | Languages and scripts | Korean, mixed Hangul-Hanja, Classical Chinese, Japanese, and English                      |
 
@@ -55,6 +55,7 @@ df = pd.read_parquet("data/korean_newspaper_archive/korean_newspaper_archive.par
 | [Inter-Korean Summit Corpus](./data/inter_korean_summit)            | Newspaper coverage    | 2000, 2007, 2018                    | 18,018 sentences / 455 articles | CSV            | *Chosun Ilbo* and *Hankyoreh* summit coverage                                   |
 | [Moon Jae-in Twitter](./data/moon_twitter)                          | Social media          | 2012–2020                           | 3,148 tweets                    | CSV            | Official account history with derived period variables                          |
 | [Korean Newspapers on Twitter](./data/kr_newspapers)                | Social media          | July–August 2017                    | 2,748 tweets                    | CSV            | Six major newspaper accounts with ideology mapping                              |
+| [Naver Movie Reviews (Classroom Edition)](./data/naver_movie_reviews) | Internet language     | Reviews to 2015                     | 50,000 reviews                  | CSV            | Balanced sentiment labels, classroom-safe filtering, 398 hand-translated examples, companion [point-and-click app](https://scdenney.github.io/feeling-in-numbers/) |
 | [KPoEM](./data/kpoem)                                               | Literature            | Colonial and post-liberation era    | 7,622 annotations               | TSV            | Poem-level and line-level emotion annotations; Yi Sang texts re-spaced for tokenization (see README) |
 | [Immigrant Interviews](./data/immigrant_interviews)                 | Survey text           | February 2019                       | 1,008 responses                 | CSV            | Open-text explanations for immigrant preference choices                         |
 | [North Korean Migrant Interviews](./data/nkmigrants_interviews)     | Survey text           | August–September 2021               | 6,027 responses                 | CSV            | Vote, hire, and neighbor tasks on co-ethnic migrant integration                 |
@@ -74,6 +75,27 @@ Large-scale corpora that are useful for Korean studies but are hosted elsewhere 
 | [Open Korean Historical Corpus (OKHC)](https://huggingface.co/datasets/seyoungsong/Open-Korean-Historical-Corpus) | Diachronic Korean textual production    | 17.7M documents, 5.1B tokens | Hugging Face |
 | [LBOX OPEN](https://huggingface.co/datasets/lbox/lbox_open)                                                       | South Korean court precedents           | 147K precedents, 259M tokens | Hugging Face |
 | [Namuwiki Corpus](https://huggingface.co/datasets/heegyu/namuwiki)                                                | Contemporary user-generated Korean wiki | 867K articles, ~3 GB         | Hugging Face |
+| [NIKL Modu Corpus (모두의 말뭉치)](https://kli.korean.go.kr)                                                        | Official national corpora: newspaper, spoken, web, messenger | Billions of words, themed releases | Free; registration plus per-corpus application |
+| [KLUE Benchmark](https://huggingface.co/datasets/klue/klue)                                                       | Contemporary Korean NLU tasks incl. news-headline topic classification | 8 tasks, 9K–55K rows each | Hugging Face, CC BY-SA 4.0 |
+| [Korean HateSpeech Dataset](https://github.com/kocohub/korean-hate-speech)                                        | Entertainment-news comments annotated for bias and toxicity | 9,381 labeled + 2M unlabeled comments | GitHub, CC BY-SA 4.0; handle with care in teaching |
+| [National Assembly Open Data (열린국회정보)](https://open.assembly.go.kr)                                          | Plenary and committee minutes, bills, members, votes | Open API plus bulk downloads | Free; API key registration |
+| [AI Hub](https://www.aihub.or.kr)                                                                                 | Government AI training data: dialogue, summarization, parallel and domain corpora | Hundreds of Korean datasets | Free; Korean account verification (overseas access can be limited) |
+| [Korean History Database (NIKH)](https://db.history.go.kr)                                                        | Primary sources from antiquity to the contemporary period incl. the Joseon Annals | Dozens of collections | Web interface; bulk access by arrangement |
+| [Korean Newspaper Archive (NLK)](https://nl.go.kr/newspaper/)                                                     | Digitized newspapers, 1883 to the 1960s | 108 titles, 8.67M articles | Web viewer with full-text search; no bulk download |
+| [Naver News Library](https://newslibrary.naver.com)                                                               | Major dailies 1920–1999, page images with OCR text | Four major dailies and more | Web viewer; no bulk download |
+| [OPUS](https://opus.nlpl.eu)                                                                                      | Parallel corpora with Korean pairs (subtitles, web crawls, TED) | Varies by corpus | Free downloads; per-corpus licenses |
+
+## Teaching With These Corpora
+
+Companion repositories that put these corpora to work in the classroom:
+
+| Repository                                                                  | What it is                                                                                                          |
+|:-----------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------|
+| [feeling-in-numbers](https://github.com/scdenney/feeling-in-numbers)         | Point-and-click text lab over the Naver Movie Reviews corpus, [live on GitHub Pages](https://scdenney.github.io/feeling-in-numbers/) — built for the Leiden PRE-Class in Asian Studies |
+| [ba2-final-paper-data](https://github.com/scdenney/ba2-final-paper-data)     | Curated 10-corpus menu with samples, data dictionaries, and an example paper for the BA2 Digital Korea final paper    |
+| [ba2_digital-korea](https://github.com/scdenney/ba2_digital-korea)           | Course materials introducing digital humanities and computational text analysis                                      |
+| [ba3_text_as_data](https://github.com/scdenney/ba3_text_as_data)             | The digital-humanities strand of BA3 Contemporary Korea and Digital Humanities                                        |
+| [corpus-building](https://github.com/scdenney/corpus-building)               | Wizard, skills, and scripts that turn a folder of PDFs into an analysis-ready text corpus                             |
 
 ## Intended Audience
 
