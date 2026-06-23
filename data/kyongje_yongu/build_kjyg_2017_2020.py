@@ -42,7 +42,7 @@ import kjyg_extract as E
 HERE = os.path.dirname(os.path.abspath(__file__))
 SOURCE_DIR = (sys.argv[1] if len(sys.argv) > 1
               else os.environ.get("KJYG_SOURCE",
-                   os.path.expanduser("~/Documents/github/research/projects/kjyg/For the love of 경제연구")))
+                   os.path.expanduser("~/Documents/github/research/projects/kjyg/data/raw/For the love of 경제연구")))
 BASELINE = os.path.join(HERE, "kjyg.csv")
 COLS = ["title", "author", "year_issue", "word_count", "file_path", "content", "source"]
 despace = lambda s: re.sub(r"\s+", "", str(s)) if pd.notna(s) else ""
