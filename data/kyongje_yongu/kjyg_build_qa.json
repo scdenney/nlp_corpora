@@ -1,0 +1,22 @@
+{
+  "total_articles": 3036,
+  "by_source": {
+    "original_json": 2582,
+    "pdf_text": 235,
+    "docx": 219
+  },
+  "year_range": [
+    1987,
+    2020
+  ],
+  "missing_author": 38,
+  "missing_content": 82,
+  "missing_issues": [
+    "1995-4",
+    "2019-4",
+    "2020-3"
+  ],
+  "skipped_files": [
+    "journal mismatch: 경제연구 2020-3.pdf is '력사과학' (루계 255), not '경제연구' — skipping"
+  ]
+}

@@ -7,7 +7,7 @@ authors:
     given-names: "Steven"
 repository-code: "https://github.com/scdenney/nlp_corpora"
 url: "https://github.com/scdenney/nlp_corpora"
-date-released: 2026-06-12
+date-released: 2026-06-23
 license: "CC-BY-NC-4.0"
 abstract: "Curated Korean-language and Korea-focused text corpora for digital humanities, Korean studies, and computational social science research."
 keywords:

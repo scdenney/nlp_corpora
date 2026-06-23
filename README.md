@@ -17,7 +17,7 @@ Maintained by **Steven Denney** (Leiden University). Each dataset folder include
 |:----------------------|:------------------------------------------------------------------------------------------|
 | Local collections     | 16 dataset folders: 15 primary corpora plus a dedicated *Kaebyok* collection              |
 | Coverage              | Late Joseon to the 2020s, with premodern reference texts in the pseudohistory corpus      |
-| Scale                 | 470,052 records across the 15 primary corpora, counted at each corpus's main working unit |
+| Scale                 | 470,505 records across the 15 primary corpora, counted at each corpus's main working unit |
 | Formats               | CSV, TSV, Parquet, JSONL, and companion PDFs                                              |
 | Languages and scripts | Korean, mixed Hangul-Hanja, Classical Chinese, Japanese, and English                      |
 
@@ -49,7 +49,7 @@ df = pd.read_parquet("data/korean_newspaper_archive/korean_newspaper_archive.par
 | [NIKH History Textbooks](./data/nikh)                               | Textbooks             | 1895–2016                           | 67 textbooks                    | CSV            | Curriculum-linked history textbook corpus with sentence-level derivatives       |
 | [Korean Pseudohistory Primary Sources](./data/korean_pseudohistory) | Primary texts         | Premodern claims to modern editions | 9 texts / 764 pages             | JSONL, Parquet | OCR-extracted source texts with document-level metadata                         |
 | [Rodong Sinmun (English)](./data/rodong_sinmun)                     | DPRK media            | 2018–2022                           | 9,797 articles                  | CSV            | English-language DPRK state newspaper coverage                                  |
-| [Kyŏngje Yŏngu](./data/kyongje_yongu)                               | DPRK journal          | 1987–2017                           | 2,583 articles                  | CSV            | North Korean economics journal                                                  |
+| [Kyŏngje Yŏngu](./data/kyongje_yongu)                               | DPRK journal          | 1987–2020                           | 3,036 articles                  | Parquet, CSV   | North Korean economics journal; extended through 2020 with article-level provenance |
 | [Presidential Speeches](./data/president_speeches)                  | South Korean politics | 1948–2022                           | 8,774 speeches                  | CSV            | Rhee Syngman to Moon Jae-in; synced to the Presidential Archive June 2026 with updater script |
 | [Blue House Petitions](./data/bluehouse_petitions)                  | Civic petitions       | 2017–2018                           | 18,077 petitions                | CSV            | 5% stratified sample with petition text, votes, and response status             |
 | [Inter-Korean Summit Corpus](./data/inter_korean_summit)            | Newspaper coverage    | 2000, 2007, 2018                    | 18,018 sentences / 455 articles | CSV            | *Chosun Ilbo* and *Hankyoreh* summit coverage                                   |
