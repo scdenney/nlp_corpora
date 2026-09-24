@@ -1,0 +1,756 @@
+{
+ "articles": [
+  {
+   "stem": "a001",
+   "row": 54,
+   "year_issue": "1988-3",
+   "cut": "title 1.00",
+   "pages": 3,
+   "words": 2183
+  },
+  {
+   "stem": "a002",
+   "row": 1133,
+   "year_issue": "2005-3",
+   "cut": "title 1.00",
+   "pages": 3,
+   "words": 1010
+  },
+  {
+   "stem": "a003",
+   "row": 1151,
+   "year_issue": "2005-4",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 1359
+  },
+  {
+   "stem": "a004",
+   "row": 1167,
+   "year_issue": "2006-1",
+   "cut": "title 1.00",
+   "pages": 3,
+   "words": 832
+  },
+  {
+   "stem": "a005",
+   "row": 1171,
+   "year_issue": "2006-1",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 1032
+  },
+  {
+   "stem": "a006",
+   "row": 1184,
+   "year_issue": "2006-2",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 896
+  },
+  {
+   "stem": "a007",
+   "row": 1237,
+   "year_issue": "2006-4",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 1109
+  },
+  {
+   "stem": "a008",
+   "row": 1251,
+   "year_issue": "2007-1",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 1317
+  },
+  {
+   "stem": "a009",
+   "row": 1259,
+   "year_issue": "2007-1",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 1108
+  },
+  {
+   "stem": "a010",
+   "row": 1300,
+   "year_issue": "2007-3",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 1730
+  },
+  {
+   "stem": "a011",
+   "row": 1305,
+   "year_issue": "2007-3",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 1432
+  },
+  {
+   "stem": "a012",
+   "row": 1320,
+   "year_issue": "2007-4",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 654
+  },
+  {
+   "stem": "a013",
+   "row": 1336,
+   "year_issue": "2008-1",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 673
+  },
+  {
+   "stem": "a014",
+   "row": 1357,
+   "year_issue": "2008-2",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 205
+  },
+  {
+   "stem": "a015",
+   "row": 1374,
+   "year_issue": "2008-2",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 602
+  },
+  {
+   "stem": "a016",
+   "row": 1398,
+   "year_issue": "2008-3",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 1252
+  },
+  {
+   "stem": "a017",
+   "row": 1423,
+   "year_issue": "2009-1",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 1018
+  },
+  {
+   "stem": "a018",
+   "row": 1456,
+   "year_issue": "2009-2",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 1312
+  },
+  {
+   "stem": "a019",
+   "row": 1463,
+   "year_issue": "2009-2",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 856
+  },
+  {
+   "stem": "a020",
+   "row": 1547,
+   "year_issue": "2010-2",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 713
+  },
+  {
+   "stem": "a021",
+   "row": 1548,
+   "year_issue": "2010-2",
+   "cut": "title 1.00",
+   "pages": 3,
+   "words": 864
+  },
+  {
+   "stem": "a022",
+   "row": 1572,
+   "year_issue": "2010-2",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 713
+  },
+  {
+   "stem": "a023",
+   "row": 1578,
+   "year_issue": "2010-3",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 853
+  },
+  {
+   "stem": "a024",
+   "row": 1583,
+   "year_issue": "2010-3",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 741
+  },
+  {
+   "stem": "a025",
+   "row": 1617,
+   "year_issue": "2010-4",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 494
+  },
+  {
+   "stem": "a026",
+   "row": 1638,
+   "year_issue": "2011-1",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 871
+  },
+  {
+   "stem": "a027",
+   "row": 1639,
+   "year_issue": "2011-1",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 602
+  },
+  {
+   "stem": "a028",
+   "row": 1641,
+   "year_issue": "2011-1",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 735
+  },
+  {
+   "stem": "a029",
+   "row": 1654,
+   "year_issue": "2011-2",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 287
+  },
+  {
+   "stem": "a030",
+   "row": 1655,
+   "year_issue": "2011-2",
+   "cut": "title 1.00",
+   "pages": 3,
+   "words": 356
+  },
+  {
+   "stem": "a031",
+   "row": 1662,
+   "year_issue": "2011-2",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 257
+  },
+  {
+   "stem": "a032",
+   "row": 1677,
+   "year_issue": "2011-2",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 1379
+  },
+  {
+   "stem": "a034",
+   "row": 1698,
+   "year_issue": "2011-3",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 571
+  },
+  {
+   "stem": "a035",
+   "row": 1705,
+   "year_issue": "2011-3",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 763
+  },
+  {
+   "stem": "a036",
+   "row": 1706,
+   "year_issue": "2011-3",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 735
+  },
+  {
+   "stem": "a037",
+   "row": 1709,
+   "year_issue": "2011-4",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 232
+  },
+  {
+   "stem": "a038",
+   "row": 1777,
+   "year_issue": "2012-2",
+   "cut": "plain title line 1.00",
+   "pages": 1,
+   "words": 561
+  },
+  {
+   "stem": "a039",
+   "row": 1778,
+   "year_issue": "2012-2",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 940
+  },
+  {
+   "stem": "a040",
+   "row": 1781,
+   "year_issue": "2012-2",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 822
+  },
+  {
+   "stem": "a041",
+   "row": 1797,
+   "year_issue": "2012-2",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 638
+  },
+  {
+   "stem": "a042",
+   "row": 1826,
+   "year_issue": "2012-3",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 628
+  },
+  {
+   "stem": "a043",
+   "row": 1840,
+   "year_issue": "2012-4",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 578
+  },
+  {
+   "stem": "a044",
+   "row": 1843,
+   "year_issue": "2012-4",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 693
+  },
+  {
+   "stem": "a045",
+   "row": 1858,
+   "year_issue": "2012-4",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 363
+  },
+  {
+   "stem": "a046",
+   "row": 1860,
+   "year_issue": "2012-4",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 627
+  },
+  {
+   "stem": "a047",
+   "row": 1891,
+   "year_issue": "2013-1",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 723
+  },
+  {
+   "stem": "a048",
+   "row": 1938,
+   "year_issue": "2013-3",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 672
+  },
+  {
+   "stem": "a049",
+   "row": 2014,
+   "year_issue": "2014-1",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 813
+  },
+  {
+   "stem": "a050",
+   "row": 2031,
+   "year_issue": "2014-1",
+   "cut": "plain title line 1.00",
+   "pages": 1,
+   "words": 494
+  },
+  {
+   "stem": "a051",
+   "row": 2056,
+   "year_issue": "2014-2",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 496
+  },
+  {
+   "stem": "a052",
+   "row": 2060,
+   "year_issue": "2014-2",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 847
+  },
+  {
+   "stem": "a053",
+   "row": 2115,
+   "year_issue": "2014-4",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 884
+  },
+  {
+   "stem": "a054",
+   "row": 2116,
+   "year_issue": "2014-4",
+   "cut": "title 1.00",
+   "pages": 3,
+   "words": 1604
+  },
+  {
+   "stem": "a055",
+   "row": 2118,
+   "year_issue": "2014-4",
+   "cut": "plain title line 1.00",
+   "pages": 2,
+   "words": 771
+  },
+  {
+   "stem": "a056",
+   "row": 2128,
+   "year_issue": "2014-4",
+   "cut": "title 1.00",
+   "pages": 3,
+   "words": 881
+  },
+  {
+   "stem": "a057",
+   "row": 2160,
+   "year_issue": "2015-1",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 732
+  },
+  {
+   "stem": "a058",
+   "row": 2165,
+   "year_issue": "2015-1",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 638
+  },
+  {
+   "stem": "a059",
+   "row": 2166,
+   "year_issue": "2015-1",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 797
+  },
+  {
+   "stem": "a060",
+   "row": 2174,
+   "year_issue": "2015-1",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 486
+  },
+  {
+   "stem": "a061",
+   "row": 2284,
+   "year_issue": "2016-1",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 420
+  },
+  {
+   "stem": "a062",
+   "row": 2285,
+   "year_issue": "2016-1",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 877
+  },
+  {
+   "stem": "a063",
+   "row": 2288,
+   "year_issue": "2016-1",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 407
+  },
+  {
+   "stem": "a064",
+   "row": 2290,
+   "year_issue": "2016-1",
+   "cut": "plain title line 1.00",
+   "pages": 3,
+   "words": 911
+  },
+  {
+   "stem": "a065",
+   "row": 2304,
+   "year_issue": "2016-1",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 845
+  },
+  {
+   "stem": "a066",
+   "row": 2318,
+   "year_issue": "2016-1",
+   "cut": "plain title line 1.00",
+   "pages": 1,
+   "words": 667
+  },
+  {
+   "stem": "a067",
+   "row": 2321,
+   "year_issue": "2016-1",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 362
+  },
+  {
+   "stem": "a068",
+   "row": 2340,
+   "year_issue": "2016-2",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 507
+  },
+  {
+   "stem": "a069",
+   "row": 2346,
+   "year_issue": "2016-2",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 831
+  },
+  {
+   "stem": "a070",
+   "row": 2407,
+   "year_issue": "2016-3",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 358
+  },
+  {
+   "stem": "a071",
+   "row": 2414,
+   "year_issue": "2016-4",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 593
+  },
+  {
+   "stem": "a072",
+   "row": 2422,
+   "year_issue": "2016-4",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 468
+  },
+  {
+   "stem": "a073",
+   "row": 2439,
+   "year_issue": "2016-4",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 867
+  },
+  {
+   "stem": "a074",
+   "row": 2447,
+   "year_issue": "2016-4",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 400
+  },
+  {
+   "stem": "a075",
+   "row": 2505,
+   "year_issue": "2017-2",
+   "cut": "title 1.00",
+   "pages": 3,
+   "words": 599
+  },
+  {
+   "stem": "a076",
+   "row": 2507,
+   "year_issue": "2017-2",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 930
+  },
+  {
+   "stem": "a077",
+   "row": 2511,
+   "year_issue": "2017-2",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 615
+  },
+  {
+   "stem": "a078",
+   "row": 2517,
+   "year_issue": "2017-2",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 500
+  },
+  {
+   "stem": "a079",
+   "row": 2525,
+   "year_issue": "2017-2",
+   "cut": "title 1.00",
+   "pages": 2,
+   "words": 1177
+  },
+  {
+   "stem": "a080",
+   "row": 2541,
+   "year_issue": "2017-3",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 276
+  },
+  {
+   "stem": "a081",
+   "row": 2559,
+   "year_issue": "2017-3",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 769
+  },
+  {
+   "stem": "a082",
+   "row": 2580,
+   "year_issue": "2017-3",
+   "cut": "title 1.00",
+   "pages": 1,
+   "words": 247
+  }
+ ],
+ "issue_1995_4": [
+  {
+   "title": "위대한 당의 령도는 사회주의경제건설의 승리를 위한 결정적담보",
+   "author": "김정일",
+   "words": 1280
+  },
+  {
+   "title": "불멸의 주체사상에 기초하여 사회주의계획화리론을 전일적으로 체계화하고 집대성한 강령적문헌",
+   "author": "김하광",
+   "words": 1120
+  },
+  {
+   "title": "인민대중자신이 주인으로 된 사회주의적경제관리 체계의 관철과 경제관리일군들의 역할",
+   "author": "리동수",
+   "words": 1442
+  },
+  {
+   "title": "경영활동의 과학화를 위한 공업기업소 관리기구체계조직의 기본원칙",
+   "author": "홍학표",
+   "words": 1069
+  },
+  {
+   "title": "사회주의사회에서 주민수요의 특징",
+   "author": "김양호",
+   "words": 1503
+  },
+  {
+   "title": "류동자금의 본질에 대한 주체적리해",
+   "author": "박대한",
+   "words": 1107
+  },
+  {
+   "title": "새 기술도입대상규정에서 나서는 원칙적요구",
+   "author": "안명희",
+   "words": 1693
+  },
+  {
+   "title": "인구발전의 일반적합법칙성",
+   "author": "준박사 홍명순",
+   "words": 1613
+  },
+  {
+   "title": "우리 나라 도매가격의 우월성",
+   "author": "강기철",
+   "words": 1435
+  },
+  {
+   "title": "사회주의농업에서 나라의 국민소득형성의 특성",
+   "author": "김재근",
+   "words": 1267
+  },
+  {
+   "title": "라진-선봉자유경제무역지대의 주요 특징과 그 전망",
+   "author": "리신효",
+   "words": 1462
+  },
+  {
+   "title": "<세계화구상>은 남조선경제를 영원한 식민지 예속경제로 만들려는 매국배족적인 망상",
+   "author": "손종철",
+   "words": 1522
+  },
+  {
+   "title": "남조선<농협>은 미제의 신식민지 농촌정책의 산물",
+   "author": "최욱선",
+   "words": 1469
+  },
+  {
+   "title": "자본주의시장경제의 본질과 취약성",
+   "author": "리승집",
+   "words": 1423
+  },
+  {
+   "title": "자본주의나라들에서의 금융의 자유화와 그 영향",
+   "author": "김득삼",
+   "words": 1544
+  },
+  {
+   "title": "새 책 소개",
+   "author": "",
+   "words": 80
+  }
+ ],
+ "unapplied_fixes": [],
+ "summary": {
+  "v1_rows": 3036,
+  "v2_rows": 3136,
+  "empty_content_v1": 82,
+  "empty_content_v2": 1,
+  "by_source": {
+   "original_json": 2501,
+   "pdf_text": 319,
+   "docx": 219,
+   "ocr_2026_09": 97
+  },
+  "new_rows_by_issue": {
+   "2019-4": 47,
+   "2020-3": 37,
+   "1995-4": 16
+  },
+  "missing_issues": [],
+  "articles_cut_without_title": 0,
+  "articles_without_ocr": 0,
+  "unapplied_fixes": 0
+ }
+}

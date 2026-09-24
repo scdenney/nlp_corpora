@@ -18,4 +18,6 @@ df = pd.read_parquet("data/kyongje_yongu/kjyg.parquet")
 df["year"] = df["year_issue"].str.split("-").str[0].astype(int)
 ```
 
+**Version 2 (2026-09).** `kjyg_v2.parquet` / `kjyg_v2.csv`: **3,136 articles, 136 of 136 issue-quarters**. The empty v1 articles are filled from scans by OCR (81 of 82) and the issues 1995-4, 2019-4 and 2020-3 are added; every v1 row is kept, and the v1 files are unchanged. New `source` value `ocr_2026_09` (97 rows; residual character error ≈0.2%). Details in the README; build summary in `kjyg_build_qa_v2.json`.
+
 **Quick caveats.** 38 missing authors and 82 missing contents (unsigned editorials / glossary entries / baseline gaps). For the cleanest text, filter `source != "pdf_text"`. A misfiled `력사과학` (Historical Science) issue shipped as `경제연구 2020-3.pdf` is excluded by a journal-identity guard.

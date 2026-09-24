@@ -10,6 +10,8 @@ Read more about the journal at [38 North](https://www.38north.org/2025/05/in-mem
 
 > **2026 update.** The corpus was extended from 1987–2017 to **1987–2020** (+454 articles, 2,582 → 3,036). The 1987 to 2017-3 baseline is preserved verbatim; 2017-4 onward was newly extracted from the publisher's article files. A `source` column records the provenance of every row. See [Provenance and the 2017–2020 extension](#provenance-and-the-20172020-extension).
 
+> **2026-09 update: version 2.** `kjyg_v2.parquet` / `kjyg_v2.csv` complete the corpus: **3,136 articles, all 136 issue-quarters**. The 82 articles with no text are filled from scans (81; one has no surviving scan) and the three missing issues 1995-4, 2019-4 and 2020-3 are added. Every v1 row is kept. The v1 files (`kjyg.parquet`, `kjyg.csv`) are unchanged. See [Version 2 (2026-09): the scan supplement](#version-2-2026-09-the-scan-supplement).
+
 ---
 
 ## Variables Included
@@ -65,6 +67,44 @@ The build is reproducible from `build_kjyg_2017_2020.py` (+ `kjyg_extract.py`); 
 
 ---
 
+## Version 2 (2026-09): the scan supplement
+
+Version 2 (`kjyg_v2.parquet`, `kjyg_v2.csv`) has the same seven columns as version 1 and keeps all 3,036 version-1 rows with their title, author, issue and file path. It changes the 81 empty rows it could fill and adds 100 articles:
+
+| Change | Articles | `source` | Method |
+|--------|----------|----------|--------|
+| Empty v1 articles filled | 81 of 82 | `ocr_2026_09` | OCR of scans of the printed articles |
+| Issue 1995-4 added | 16 | `ocr_2026_09` | OCR of a scan of the full issue; authors from its table of contents |
+| Issue 2019-4 added | 47 | `pdf_text` | PDF text layer, same extractor as the other 2019–20 issues |
+| Issue 2020-3 added | 37 | `pdf_text` | PDF text layer of the genuine 루계 188 |
+
+Result: **3,136 articles; 136 of 136 issue-quarters.** `source`: `original_json` 2,501 · `docx` 219 · `pdf_text` 319 · `ocr_2026_09` 97. One article still has no text: 2011-3 「미국식금융방식의 부당성」 (리원경), for which no scan was found.
+
+**OCR.** Scans were read at 300 dpi by a vision-language model, Qwen3.6-35B-A3B (FP8) served with vLLM, prompted with each page's year, issue, the leaders who can be named at that date, and (for single articles) the title and author. The text then went through four logged correction layers:
+
+1. 89 spelling rules that convert South Korean forms the rest of the corpus never uses (화폐, 노동, 컴퓨터 …) to DPRK forms, and correct a leader's name that is impossible at the page's date. Run over all 15.4 million characters of version 1, they change 21.
+2. 22 pairs of look-alike syllables (판/관, 전/건, 법/범 …), swapped only where the syllable as read makes a three-character sequence never seen in version 1 and the swap makes well-attested ones. Run over version 1, they change nothing.
+3. 297 reviewed corrections: every word with an unattested three-character sequence that a second OCR model (dots.mocr) read differently was checked against that reading, the corpus and, where needed, the scan (by a language model, Claude Opus, not a person).
+4. Six pages read in full against the scan replace the OCR text.
+
+DPRK orthography is never normalized. **Accuracy:** character error rate on Hangul against pages read in full from the scans is about **0.2%** on two randomly drawn pages (0.79% before correction). The reference pages were themselves read by a model, so treat this as a close estimate.
+
+**Text-layer note.** On about eight pages of 2019-4 and 2020-3 the PDF text layer holds passages in a different order from the printed page; the text is complete (checked against an OCR reading), only the order differs.
+
+**Which file to use.** Version 2 for complete coverage. Version 1 stays unchanged so that work built on it remains reproducible. To exclude transcribed text, filter `source != "ocr_2026_09"`; to recover the version-1 composition, keep `source != "ocr_2026_09"` and drop the issues 1995-4, 2019-4 and 2020-3 (the 81 filled rows were empty in version 1).
+
+| Decade | v2 articles |
+|--------|-------------|
+| 1980s (1987–89) | 116 |
+| 1990s | 607 |
+| 2000s | 813 |
+| 2010s | 1,451 |
+| 2020 | 149 |
+
+A per-article build summary (which scan pages, where each article was cut, word counts) is in `kjyg_build_qa_v2.json`. The OCR pipeline and scans are held in the research project (Denney & Ward, *No Previews in Pyongyang*), not in this repository.
+
+---
+
 ## Suggested Derived Variables
 
 The following variables are not stored but are straightforward to derive from `year_issue`:
@@ -114,6 +154,7 @@ Researchers applying South Korean NLP tools (tokenizers, morphological analyzers
 - **82 rows** have missing `content` and **38 rows** have missing `author` (unsigned editorials, leader-tribute pieces, and short 상식/glossary entries).
 - The `file_path` column is provenance only and is not functional on other systems.
 - For the cleanest text subset, filter to `source != "pdf_text"`; for the original published corpus, filter to `source == "original_json"`.
+- **Version 2:** 1 row has no text and 52 rows have no author; `ocr_2026_09` rows carry a residual character error rate of about 0.2%.
 
 ---
 
@@ -123,3 +164,5 @@ Researchers applying South Korean NLP tools (tokenizers, morphological analyzers
 - **kjyg.csv** — the same data as UTF-8 CSV.
 - **build_kjyg_2017_2020.py**, **kjyg_extract.py** — reproducible build pipeline for the 2017–2020 extension.
 - **kjyg_build_qa.json** — machine-readable build summary (counts, gaps, skipped files).
+- **kjyg_v2.parquet**, **kjyg_v2.csv** — version 2 (2026-09): the complete corpus, 3,136 articles, all 136 issue-quarters.
+- **kjyg_build_qa_v2.json** — version-2 build summary (per-article scan pages, cuts and word counts; the 1995-4 issue).
