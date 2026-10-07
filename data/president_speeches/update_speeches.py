@@ -3,23 +3,25 @@
 #
 # The archive keeps adding digitized records, so this script:
 #   1. crawls the full speech catalog (list pages),
-#   2. diffs against the local CSV on (president, date, normalized title),
+#   2. diffs against the local CSV on source ID and legacy title/date keys,
 #   3. fetches detail pages for new records and appends them.
 #
 # Notes
 # - Record IDs (artid) on the current site are a different ID space from the
 #   legacy division_number values in older rows; rows added by this script use
-#   the current artid. The (president, date, title) triple is the stable key.
-# - As of June 2026 the archive lists no 연설문 records for 윤석열 yet (records
-#   transferred April 2025; ingestion pending). Re-run this script later.
+#   the current artid. Older rows still need (president, date, title) matching.
+# - New archive records retain distinct artids even when date and title match.
 #
 # Usage:  python update_speeches.py [--probe ARTID] [--dry-run]
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import csv
+import os
 import re
 import sys
 import time
+from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
@@ -27,7 +29,7 @@ from bs4 import BeautifulSoup
 BASE = "https://www.pa.go.kr"
 LIST = BASE + "/research/contents/speech/index.jsp"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) corpus-sync (academic)"}
-CSV_PATH = "president_speech_ko.csv"
+CSV_PATH = Path(__file__).with_name("president_speech_ko.csv")
 SLEEP = 0.25
 
 csv.field_size_limit(10_000_000)
@@ -41,10 +43,9 @@ def key(president, date, title):
     return (president.strip(), date.strip(), norm_title(title))
 
 
-def crawl_list(session, cache="speech_list_cache.json"):
+def crawl_list(session, cache=None):
     import json
-    import os
-    if os.path.exists(cache):
+    if cache is not None and cache.exists():
         with open(cache, encoding="utf-8") as f:
             rows = json.load(f)
         print(f"  using cached list ({len(rows)} rows); delete {cache} to recrawl", file=sys.stderr)
@@ -78,8 +79,9 @@ def crawl_list(session, cache="speech_list_cache.json"):
         page += 1
         time.sleep(SLEEP)
     import json
-    with open(cache, "w", encoding="utf-8") as f:
-        json.dump(rows, f, ensure_ascii=False)
+    if cache is not None:
+        with open(cache, "w", encoding="utf-8") as f:
+            json.dump(rows, f, ensure_ascii=False)
     return rows
 
 
@@ -113,6 +115,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--probe", help="fetch one artid and print parsed output")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--use-cache", action="store_true",
+                    help="use or create speech_list_cache.json instead of recrawling")
     args = ap.parse_args()
 
     s = requests.Session()
@@ -130,8 +134,6 @@ def main():
         existing = list(reader)
     print(f"local rows: {len(existing)}")
 
-    have_full = {key(r["president"], r["date"], r["title"])
-                 for r in existing if r["date"].strip()}
     # rows with missing dates can't full-key match; index them for repair
     from collections import Counter, defaultdict
     nodate = defaultdict(list)
@@ -139,17 +141,28 @@ def main():
         if not r["date"].strip():
             nodate[(r["president"].strip(), norm_title(r["title"]))].append(r)
 
-    archive = crawl_list(s)
+    cache = Path(__file__).with_name("speech_list_cache.json") if args.use_cache else None
+    archive = crawl_list(s, cache)
     print(f"archive rows: {len(archive)}")
     # c_pa02062 = speech texts; c_pa02063 = video records; c_pa02064 = audio
     # records. Only the text catalog belongs in this corpus.
     archive = [a for a in archive if a["catid"] == "c_pa02062"]
     print(f"text-catalog (c_pa02062) rows: {len(archive)}")
+    archive_ids = {a["artid"] for a in archive}
+    legacy_keys = Counter(key(r["president"], r["date"], r["title"])
+                          for r in existing if r["date"].strip()
+                          and r["division_number"].strip() not in archive_ids)
 
-    fresh, repairs, ambiguous, seen = [], 0, 0, set()
+    fresh, repairs, ambiguous = [], 0, 0
+    existing_ids = {r["division_number"].strip() for r in existing}
+    seen_ids = set()
     for a in archive:
+        if a["artid"] in existing_ids or a["artid"] in seen_ids:
+            continue
+        seen_ids.add(a["artid"])
         k = key(a["president"], a["date"], a["title"])
-        if k in have_full or k in seen:
+        if legacy_keys[k]:
+            legacy_keys[k] -= 1
             continue
         nk = (a["president"].strip(), norm_title(a["title"]))
         if nk in nodate:
@@ -161,7 +174,6 @@ def main():
             else:
                 ambiguous += 1
             continue
-        seen.add(k)
         fresh.append(a)
 
     print(f"date repairs: {repairs} | ambiguous (left alone): {ambiguous} | new records: {len(fresh)}")
@@ -170,14 +182,18 @@ def main():
     if args.dry_run:
         return
 
-    added = []
-    for i, r in enumerate(fresh, 1):
-        try:
-            meta, body = fetch_detail(s, r["catid"], r["artid"])
-        except Exception as e:
-            print(f"  ! {r['artid']} failed: {e}", file=sys.stderr)
-            continue
-        added.append({
+    def fetch_one(r):
+        for attempt in range(3):
+            try:
+                meta, body = fetch_detail(requests.Session(), r["catid"], r["artid"])
+                if len(body) < 50:
+                    raise ValueError(f"short speech body ({len(body)} chars)")
+                break
+            except Exception:
+                if attempt == 2:
+                    raise
+                time.sleep(2 ** attempt)
+        return {
             "division_number": r["artid"],
             "president": meta.get("대통령", r["president"]),
             "title": r["title"],
@@ -185,19 +201,36 @@ def main():
             "location": meta.get("연설장소", ""),
             "kind": meta.get("유형", r["kind"]),
             "speech_text": body,
-        })
-        if i % 25 == 0:
-            print(f"  fetched {i}/{len(fresh)}", file=sys.stderr)
-        time.sleep(SLEEP)
+        }
+
+    fetched, errors = {}, []
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        tasks = {pool.submit(fetch_one, r): r for r in fresh}
+        for i, future in enumerate(as_completed(tasks), 1):
+            record = tasks[future]
+            try:
+                fetched[record["artid"]] = future.result()
+            except Exception as e:
+                errors.append((record["artid"], str(e)))
+            if i % 50 == 0 or i == len(fresh):
+                print(f"  fetched {i}/{len(fresh)} ({len(errors)} failures)", file=sys.stderr)
+
+    if errors:
+        for artid, error in errors:
+            print(f"  ! {artid} failed: {error}", file=sys.stderr)
+        raise RuntimeError(f"Refusing partial CSV update: {len(errors)} detail fetches failed")
+    added = [fetched[r["artid"]] for r in fresh]
 
     # rewrite: existing rows (with repaired dates) + appended new rows
-    with open(CSV_PATH, "w", newline="", encoding="utf-8") as f:
+    temp_path = CSV_PATH.with_suffix(".tmp")
+    with open(temp_path, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames)
         w.writeheader()
         for row in existing:
             w.writerow(row)
         for row in added:
             w.writerow(row)
+    os.replace(temp_path, CSV_PATH)
     print(f"rewrote {CSV_PATH}: {len(existing)} existing ({repairs} dates repaired) + {len(added)} new")
 
 

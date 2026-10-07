@@ -1,0 +1,25 @@
+{
+  "name": "xcavator-corpus-adapter",
+  "version": "1.1.0",
+  "description": "Local browser capture adapter for presidential X posts",
+  "homepage": "https://github.com/dvdkwak/Xcavator#readme",
+  "bugs": {
+    "url": "https://github.com/dvdkwak/Xcavator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvdkwak/Xcavator.git"
+  },
+  "license": "MIT",
+  "author": "David Kwakernaak",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
