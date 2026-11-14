@@ -2,6 +2,8 @@
 
 This folder contains the National Institute of Korean History (NIKH; 국사편찬위원회) history textbook corpus, a collection of Korean history textbooks produced under successive national curricula from the late Joseon and Korean Empire through the Japanese colonial period, liberation, and contemporary postwar curricula — including the revised 7th Curriculum textbooks used through 2016.
 
+For the post-1945 chapters of the privately written, state-approved books of 2007–2025, see the companion [History Textbooks, 1954–2025](../history_textbooks_postwar) corpus.
+
 An online-navigable version of the original textbooks is available through the National Institute of Korean History: [contents.history.go.kr](https://contents.history.go.kr/front/ta/main.do)
 
 ---

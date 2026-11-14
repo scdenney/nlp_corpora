@@ -11,23 +11,26 @@ This directory contains the local datasets included in the repository. Each corp
 
 ## Primary Corpora
 
-| Corpus                                                         | Theme                 | Coverage                | Main unit                       | Formats        |
-|:---------------------------------------------------------------|:----------------------|:------------------------|:--------------------------------|:---------------|
-| [Korean Newspaper Archive](./korean_newspaper_archive)         | Historical newspapers | 1883–1952               | 364,409 articles                | Parquet, CSV   |
-| [Colonial-Era Magazines](./colonial_magazines)                 | Historical magazines  | 1896–1943               | 15,326 articles                 | Parquet, CSV   |
-| [NIKH History Textbooks](./nikh)                               | Textbooks             | 1895–2016               | 67 textbooks                    | CSV            |
-| [Korean Pseudohistory Primary Sources](./korean_pseudohistory) | Primary texts         | Premodern to modern     | 9 texts / 764 pages             | JSONL, Parquet |
-| [Rodong Sinmun (English)](./rodong_sinmun)                     | DPRK media            | 2018–2022               | 9,797 articles                  | CSV            |
-| [Kyŏngje Yŏngu](./kyongje_yongu)                               | DPRK journal          | 1987–2017               | 2,583 articles                  | CSV            |
-| [Presidential Speeches](./president_speeches)                  | South Korean politics | 1948–2022               | 8,774 speeches                  | CSV            |
-| [Blue House Petitions](./bluehouse_petitions)                  | Civic petitions       | 2017–2018               | 18,077 petitions                | CSV            |
-| [Inter-Korean Summit Corpus](./inter_korean_summit)            | Newspaper coverage    | 2000, 2007, 2018        | 18,018 sentences / 455 articles | CSV            |
-| [Moon Jae-in Twitter](./moon_twitter)                          | Social media          | 2012–2020               | 3,148 tweets                    | CSV            |
-| [Korean Newspapers on Twitter](./kr_newspapers)                | Social media          | July–August 2017        | 2,748 tweets                    | CSV            |
-| [Naver Movie Reviews (Classroom Edition)](./naver_movie_reviews) | Internet language     | Reviews to 2015         | 50,000 reviews                  | CSV            |
-| [KPoEM](./kpoem)                                               | Literature            | Colonial to postwar era | 7,622 annotations               | TSV            |
-| [Immigrant Interviews](./immigrant_interviews)                 | Survey text           | Cross-sectional         | 1,008 responses                 | CSV            |
-| [North Korean Migrant Interviews](./nkmigrants_interviews)     | Survey text           | Cross-sectional         | 6,027 responses                 | CSV            |
+| Corpus | Theme | Coverage | Main unit | Formats |
+|:--|:--|:--|:--|:--|
+| [Korean Newspaper Archive](./korean_newspaper_archive) | Historical newspapers | 1883–1952 | 364,409 articles | Parquet, CSV |
+| [Colonial-Era Magazines](./colonial_magazines) | Historical magazines | 1896–1943 | 15,326 articles | Parquet, CSV |
+| [NIKH History Textbooks](./nikh) | Textbooks | 1895–2016 | 67 textbooks | CSV |
+| [History Textbooks, 1954–2025](./history_textbooks_postwar) | Textbooks | 1954–2025 | 1,208 passages / 23 textbooks | CSV |
+| [Korean Pseudohistory Primary Sources](./korean_pseudohistory) | Primary texts | Premodern to modern | 9 texts / 764 pages | JSONL, Parquet |
+| [Rodong Sinmun (English)](./rodong_sinmun) | DPRK media | 2018–2022 | 9,797 articles | CSV |
+| [Kyŏngje Yŏngu](./kyongje_yongu) | DPRK journal | 1987–2020 | 3,136 articles (v2) | Parquet, CSV |
+| [Presidential Speeches](./president_speeches) | South Korean politics | 1948–2026 | 9,883 speeches | CSV |
+| [National Assembly Committee Speeches](./national_assembly_speeches) | South Korean politics | 2001–2026 | 1,800 speaking turns | CSV |
+| [Blue House Petitions](./bluehouse_petitions) | Civic petitions | 2017–2018 | 18,077 petitions | CSV |
+| [Inter-Korean Summit Corpus](./inter_korean_summit) | Newspaper coverage | 2000, 2007, 2018 | 18,018 sentences / 455 articles | CSV |
+| [Moon Jae-in Twitter](./moon_twitter) | Social media | 2012–2020 | 3,148 tweets | CSV |
+| [Presidential Tweets](./presidential_twitter) | Social media | 2012–2026 | 3,531 posts | CSV, JSONL |
+| [Korean Newspapers on Twitter](./kr_newspapers) | Social media | July–August 2017 | 2,748 tweets | CSV |
+| [Naver Movie Reviews (Classroom Edition)](./naver_movie_reviews) | Internet language | Reviews to 2015 | 50,000 reviews | CSV |
+| [KPoEM](./kpoem) | Literature | Colonial to postwar era | 7,622 annotations | TSV |
+| [Immigrant Interviews](./immigrant_interviews) | Survey text | Cross-sectional | 1,008 responses | CSV |
+| [North Korean Migrant Interviews](./nkmigrants_interviews) | Survey text | Cross-sectional | 6,027 responses | CSV |
 
 ## Focused Collection
 

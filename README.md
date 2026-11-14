@@ -1,11 +1,11 @@
 # NLP Corpora for Korean Studies
 
-![Collections](https://img.shields.io/badge/Collections-16-blue)
-![Primary Rows](https://img.shields.io/badge/Primary%20Rows-470K%2B-green)
-![Coverage](https://img.shields.io/badge/Coverage-1883%20to%202022-orange)
+![Collections](https://img.shields.io/badge/Collections-20-blue)
+![Primary Rows](https://img.shields.io/badge/Primary%20Rows-510K%2B-green)
+![Coverage](https://img.shields.io/badge/Coverage-1883%20to%202026-orange)
 ![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey)
 
-A curated collection of Korean-language and Korea-focused text corpora for digital humanities, Korean studies, and computational social science. The repository brings together historical newspapers and magazines, political speech and petition data, social media, literary corpora, and survey text in a single, well-documented working collection.
+A curated collection of Korean-language and Korea-focused text corpora for digital humanities, Korean studies, and computational social science. The repository brings together historical newspapers and magazines, political speech, parliamentary debate, and petition data, history textbooks, social media, literary corpora, and survey text in a single, well-documented working collection.
 
 Maintained by **Steven Denney** (Leiden University). Each dataset folder includes a `README.md` with source notes, variable descriptions, file details, and reuse guidance.
 
@@ -15,9 +15,9 @@ Maintained by **Steven Denney** (Leiden University). Each dataset folder include
 
 | Scope                 | Details                                                                                   |
 |:----------------------|:------------------------------------------------------------------------------------------|
-| Local collections     | 16 dataset folders: 15 primary corpora plus a dedicated *Kaebyok* collection              |
+| Local collections     | 20 dataset folders: 19 primary corpora plus a dedicated *Kaebyok* collection              |
 | Coverage              | Late Joseon to the 2020s, with premodern reference texts in the pseudohistory corpus      |
-| Scale                 | 470,505 records across the 15 primary corpora, counted at each corpus's main working unit |
+| Scale                 | 513,421 records across the 19 primary corpora, counted at each corpus's main working unit (Moon tweets counted once) |
 | Formats               | CSV, TSV, Parquet, JSONL, and companion PDFs                                              |
 | Languages and scripts | Korean, mixed Hangul-Hanja, Classical Chinese, Japanese, and English                      |
 
@@ -47,10 +47,12 @@ df = pd.read_parquet("data/korean_newspaper_archive/korean_newspaper_archive.par
 | [Korean Newspaper Archive](./data/korean_newspaper_archive)         | Historical newspapers | 1883–1952                           | 364,409 articles                | Parquet, CSV   | 39 newspapers from the late Joseon period through the early Republic            |
 | [Colonial-Era Magazines](./data/colonial_magazines)                 | Historical magazines  | 1896–1943                           | 15,326 articles                 | Parquet, CSV   | 19 magazines including *Kaebyok*, *Samcheolli*, *Byeolgeongon*, and *Donggwang* |
 | [NIKH History Textbooks](./data/nikh)                               | Textbooks             | 1895–2016                           | 67 textbooks                    | CSV            | Curriculum-linked history textbook corpus with sentence-level derivatives       |
+| [History Textbooks, 1954–2025](./data/history_textbooks_postwar)   | Textbooks             | 1954–2025                           | 1,208 passages / 23 textbooks   | CSV            | Post-1945 chapters of state and approved high-school history books; extends NIKH to the 2007–2025 approved books |
 | [Korean Pseudohistory Primary Sources](./data/korean_pseudohistory) | Primary texts         | Premodern claims to modern editions | 9 texts / 764 pages             | JSONL, Parquet | OCR-extracted source texts with document-level metadata                         |
 | [Rodong Sinmun (English)](./data/rodong_sinmun)                     | DPRK media            | 2018–2022                           | 9,797 articles                  | CSV            | English-language DPRK state newspaper coverage                                  |
 | [Kyŏngje Yŏngu](./data/kyongje_yongu)                               | DPRK journal          | 1987–2020                           | 3,136 articles (v2)             | Parquet, CSV   | North Korean economics journal; extended through 2020 with article-level provenance; v2 (2026-09) fills the empty articles and three missing issues from scans |
 | [Presidential Speeches](./data/president_speeches)                  | South Korean politics | 1948–2026                           | 9,883 speeches                  | CSV            | Rhee through Lee; includes 728 Kim Young-sam, 721 Yoon, and 388 Lee texts; updated October 2026 |
+| [National Assembly Committee Speeches](./data/national_assembly_speeches) | South Korean politics | 2001–2026                    | 1,800 speaking turns            | CSV            | Balanced sample of six committees × six Assembly terms; each turn coded for party, bloc, and ruling or opposition on the day |
 | [Blue House Petitions](./data/bluehouse_petitions)                  | Civic petitions       | 2017–2018                           | 18,077 petitions                | CSV            | 5% stratified sample with petition text, votes, and response status             |
 | [Inter-Korean Summit Corpus](./data/inter_korean_summit)            | Newspaper coverage    | 2000, 2007, 2018                    | 18,018 sentences / 455 articles | CSV            | *Chosun Ilbo* and *Hankyoreh* summit coverage                                   |
 | [Moon Jae-in Twitter](./data/moon_twitter)                          | Social media          | 2012–2020                           | 3,148 tweets                    | CSV            | Official account history with derived period variables                          |
@@ -93,7 +95,7 @@ Corpora, archives, and databases useful for Korean studies that are hosted elsew
 | Resource                                                                                                          | Coverage                                | Scale                        | Access       |
 |:------------------------------------------------------------------------------------------------------------------|:----------------------------------------|:-----------------------------|:-------------|
 | [Presidential Archive Speech Records (대통령기록관 연설기록)](https://www.pa.go.kr/research/contents/speech/)      | Speech texts from Rhee through Yoon | 9,268 current text-catalog entries | Web; source of this repo's local corpus (see `data/president_speeches`) |
-| [National Assembly Open Data (열린국회정보)](https://open.assembly.go.kr)                                          | Plenary and committee minutes, bills, members, votes | Open API plus bulk downloads | Free; API key registration |
+| [National Assembly Open Data (열린국회정보)](https://open.assembly.go.kr)                                          | Plenary and committee minutes, bills, members, votes | Open API plus bulk downloads | Free; API key registration; source of this repo's committee-speech sample (see `data/national_assembly_speeches`) |
 | [Blue House Petitions Archive](https://github.com/lovit/petitions_archive)                                        | Full 청와대 national petitions, Aug 2017–2019 (complements this repo's 5% sample) | ~277K petitions | GitHub + Python package |
 | [Manifesto Project (MARPOR)](https://manifesto-project.wzb.eu)                                                    | Human-coded party election programs, 67 countries incl. South Korea | 5,285 manifestos, 3.3M coded quasi-sentences | Free academic registration; API + manifestoR |
 | [Policy Briefings (대한민국 정책브리핑)](https://www.korea.kr)                                                     | Government press releases, briefings, and speech texts incl. presidential statements | Continuous since the 2000s | Web; KOGL-licensed government content |
