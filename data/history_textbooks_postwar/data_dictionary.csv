@@ -1,0 +1,13 @@
+variable,type,description,example,missing
+id,string,Passage id: book and passage number,h11-mirae-155,0
+book_id,string (category),Source book id (NIKH or project id),H11-mirae,0
+title,string,Book title,고등학교 한국사,0
+publisher,string (category),"Publisher (for state books, the ministry)",미래엔,0
+year,integer,Year of the edition,2011,0
+curriculum,string (category),"National curriculum: 1st to 7th, 2009 revised, 2022 revised",2009 revised,0
+era,string (category),"authoritarian (1954-1987: the 1954 book, approved under the 1950s 검인정 system, and four state books), democratic-state (state books 1995-2002), 2000s-certified (2007 근현대사), 2011+-certified (한국사 2011-2025)",2011+-certified,0
+authorization,string (category),"국정 (one state book), 검정 (certified, several publishers), 검인정 (the 1950s system)",검정,0
+passage_no,integer,Position of the passage in the book's post-1945 span (1 = first),155,0
+share_of_span,number,"Position as a share of the span: 0 = start (1945), 1 = end of the book",0.951,0
+text,string,"Passage of whole sentences, mostly 400-700 characters (range 156-839); not preprocessed",징용·징병의 강제성 은폐 및 군대 위안부 삭제 4. 러 ...,0
+n_chars,integer,Characters in text,426,0

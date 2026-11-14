@@ -1,0 +1,16 @@
+variable,type,description,example,missing
+id,string,"Turn id: na-, the id of the minutes, and the turn number in that meeting",na-41425-1078,0
+date,string,Date of the meeting YYYY-MM-DD; stored as text,2016-06-21,0
+year,integer,Year of the meeting,2016,0
+assembly_term,string (category),"Assembly term: 16th (2000-04), 17th (2004-08), 19th (2012-16), 20th (2016-20), 21st (2020-24), 22nd (2024-); the 18th is not in the source",20th,0
+president,string (category),"President in office on the date: 김대중, 노무현, 이명박, 박근혜, 문재인, 윤석열, 이재명; an acting presidency is counted with the president it followed",박근혜,0
+president_camp,string (category),"Camp of that president: progressive or conservative; describes the government, not the speaker",conservative,0
+committee,string (category),"Policy area: 국방 (defense), 외교통일 (foreign affairs and unification), 법제사법 (legislation and judiciary), 환경노동 (environment and labor), 보건복지 (health and welfare), 여성가족 (gender equality and family)",보건복지,0
+committee_name,string (category),Committee name as recorded in the minutes,보건복지위원회,0
+meeting_type,string (category),"국정감사 (annual audit of the government), 정기회 (regular session), 임시회 (extraordinary session)",임시회,0
+speaker,string,Member's name as printed; in hanja until about 2004,남인순,0
+party,string (category),"The member's party on the date of the meeting (Korean Wikipedia member lists, with dated switches); 무소속 = independent",더불어민주당,0
+bloc,string (category),"Party family: democratic (민주당 계열), conservative (보수 계열), other party, independent",democratic,0
+ruling_opposition,string (category),"ruling party (the president's party on that date), opposition, or independent",opposition,0
+text,string,One speaking turn as recorded in the minutes; not preprocessed,오늘 보건복지위원회 20대 국회 첫 질의를 하면서 많은 ...,0
+n_chars,integer,Characters in text,494,0
